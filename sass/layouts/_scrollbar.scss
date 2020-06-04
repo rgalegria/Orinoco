@@ -1,0 +1,15 @@
+/*---------------------------------*/
+/*         _scrollbar.scss       */
+/*-------------------------------*/
+
+body::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: $grey;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: $purple;
+}

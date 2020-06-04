@@ -1,0 +1,410 @@
+/*---------------------------------*/
+/*          _checkout.scss        */
+/*-------------------------------*/
+
+.payment {
+  display: flex;
+  flex-direction: column;
+
+  &__form {
+    @media (min-width: $desktop) {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  &__details-wrap {
+    @media (min-width: $desktop) {
+      width: 50%;
+      box-shadow: 6px 0px 9px rgba(0, 0, 0, 0.1);
+      z-index: 2;
+    }
+  }
+
+  &__cart-wrap {
+    @media (min-width: $desktop) {
+      width: 50%;
+      background-color: $light-grey;
+    }
+  }
+
+  &__desktop-footer {
+    display: none;
+    @media (min-width: $desktop) {
+      display: flex;
+      flex-direction: row;
+      margin-top: auto;
+      background-color: transparent;
+      border-top: 1px solid $medium-grey;
+    }
+  }
+
+  &__mobile-footer {
+    display: flex;
+    flex-direction: row;
+    padding: 4em 0;
+    background-color: $light-grey;
+
+    @media (min-width: $desktop) {
+      display: none;
+    }
+  }
+}
+
+.details {
+  padding: 1em;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet) {
+    padding: 3em;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 715px;
+    margin-left: auto;
+  }
+
+  &__logo {
+    margin-bottom: 16px;
+
+    &__link {
+      display: block;
+    }
+  }
+
+  &__contact {
+    margin-bottom: 1em;
+  }
+
+  &__address {
+    margin-bottom: 1.8em;
+
+    @media (min-width: $desktop) {
+      display: grid;
+      grid-template: repeat(4, 1fr) / repeat(6, 1fr);
+      grid-gap: 0 8px;
+      grid-template-areas:
+        "fn fn fn ln ln ln"
+        "ad ad ad ad ad ad"
+        "co co co co co co"
+        "zc zc ty ty ry ry";
+    }
+  }
+
+  &__icons {
+    font-size: 2em;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+
+    &__item {
+      margin-right: 8px;
+    }
+  }
+
+  &__card {
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    grid-gap: 0 8px;
+    grid-template-areas:
+      "o o o"
+      "n n n"
+      "c m y";
+  }
+
+  // &__footer {
+  //   &--active {
+  //     display: flex;
+  //   }
+
+  //   &--inactive {
+  //     display: none;
+  //   }
+  // }
+}
+
+.cart {
+  padding: 1em;
+  background-color: $light-grey;
+  border-bottom: 1px solid $medium-grey;
+
+  @media (min-width: $tablet) {
+    padding: 3em;
+  }
+
+  @media (min-width: $desktop) {
+    border-bottom: 0;
+    max-width: 715px;
+    margin-right: auto;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid $black;
+
+    @media (min-width: $intermedium) {
+      flex-direction: row;
+      margin-bottom: 1em;
+    }
+  }
+
+  &__title {
+    font-size: $middle-small;
+    margin: 0;
+
+    @media (min-width: $tablet) {
+      font-size: $middle;
+    }
+
+    @media (min-width: $desktop) {
+      font-size: $middle;
+      // margin: 0;
+    }
+  }
+
+  &__info {
+    @media (min-width: $intermedium) {
+      margin: auto 0 0 auto;
+    }
+  }
+
+  &__product {
+    display: flex;
+    flex-direction: column;
+    // border-top: 2px solid $black;
+    border-bottom: 2px solid $black;
+    text-align: left;
+
+    // @media (min-width: $intermedium) {
+    //   text-align: left;
+    // }
+
+    &__del-btn {
+      display: flex;
+      // margin-left: auto;
+      padding-left: 0;
+    }
+
+    &__wrapper-main {
+      display: flex;
+      flex-direction: row-reverse;
+
+      // @media (min-width: $intermedium) {
+      //   display: flex;
+      //   flex-direction: row-reverse;
+      // }
+    }
+
+    &__wrapper-info {
+      margin-right: auto;
+
+      // @media (min-width: $intermedium) {
+      //   display: flex;
+      //   flex-direction: column;
+      //   max-width: 42%;
+      //   margin-right: auto;
+      // }
+    }
+
+    &__img {
+      width: 32vw;
+      height: 110px;
+      margin-bottom: 2em;
+      background-image: url(http://localhost:3000/images/vcam_4.jpg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      @media (min-width: $tablet) {
+        width: 32vw;
+        height: 122px;
+      }
+
+      @media (min-width: $desktop) {
+        // height: 210px;
+        width: 15vw;
+        height: 115px;
+        margin-bottom: 0;
+      }
+
+      @media (min-width: 1430px) {
+        width: 215px;
+        height: 115px;
+      }
+    }
+
+    &__title {
+      font-size: $middle-small;
+
+      @media (min-width: $tablet) {
+        font-size: $middle;
+      }
+    }
+
+    &__price {
+      font-size: $smaller;
+      @extend %typography-subtitle;
+
+      @media (min-width: $tablet) {
+        font-size: $middle-small;
+      }
+    }
+
+    &__dropd {
+      // margin: 1em 0;
+      margin: 0 0 2.2em 0;
+
+      // @media (min-width: $intermedium) {
+      //   margin: 0;
+      // }
+    }
+
+    &__promocode {
+      padding: 2em 0;
+      border-bottom: 2px solid $black;
+
+      @media (min-width: $tablet) {
+        display: flex;
+        flex-direction: row;
+      }
+      // @media (min-width: $intermedium) {
+      //   display: flex;
+      //   flex-direction: row;
+      // }
+
+      &__input {
+        margin-bottom: 2em;
+        background-color: $light-grey;
+
+        @media (min-width: $tablet) {
+          margin-bottom: 4px;
+        }
+        // @media (min-width: $intermedium) {
+        //   margin-bottom: 4px;
+        // }
+      }
+
+      &__btn {
+        @media (min-width: $tablet) {
+          margin: 4px 0;
+          width: 200px;
+          margin-left: 8px;
+        }
+        // @media (min-width: $intermedium) {
+        //   margin: 4px 0;
+        //   width: 200px;
+        //   margin-left: 8px;
+        // }
+      }
+    }
+
+    &__division {
+      border-bottom: 2px solid $black;
+    }
+
+    &__subtotals {
+      display: flex;
+      font-size: 1.2em;
+      text-transform: none;
+      margin: 1.5em 0;
+      @extend %typography-title;
+
+      &__price {
+        margin-left: auto;
+      }
+    }
+
+    &__total {
+      display: flex;
+      font-size: $small;
+      padding: 1.2em 0;
+
+      &__price {
+        margin-left: auto;
+      }
+    }
+
+    &__btn {
+      @media (min-width: $tablet) {
+        width: 250px;
+        margin: 0;
+        margin-left: auto;
+      }
+      // @media (min-width: $intermedium) {
+      //   width: 250px;
+      //   margin: 0;
+      //   margin-left: auto;
+      // }
+    }
+
+    &__return {
+      padding: 2.5em 0;
+      margin: 0 auto;
+
+      @media (min-width: $tablet) {
+        // width: 210px;
+        margin: 0;
+        margin-left: auto;
+      }
+      // @media (min-width: $intermedium) {
+      //   // width: 210px;
+      //   margin: 0;
+      //   margin-left: auto;
+      // }
+    }
+  }
+}
+
+/*       address input boxes      */
+#first-name {
+  grid-area: fn;
+}
+
+#last-name {
+  grid-area: ln;
+}
+
+#address {
+  grid-area: ad;
+}
+
+#address-complement {
+  grid-area: co;
+}
+
+#zipcode {
+  grid-area: zc;
+}
+
+#city {
+  grid-area: ty;
+}
+
+#country {
+  grid-area: ry;
+}
+
+/*       card input boxes      */
+
+#card-owner {
+  grid-area: o;
+}
+
+#card-number {
+  grid-area: n;
+}
+
+#card-cvv {
+  grid-area: c;
+}
+
+#card-month {
+  grid-area: m;
+}
+
+#card-year {
+  grid-area: y;
+}

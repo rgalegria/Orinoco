@@ -1,0 +1,101 @@
+/*---------------------------------*/
+/*  _confirmation-payments.scss   */
+/*-------------------------------*/
+
+.confirmation {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+  padding: 48px 36px;
+  margin: auto 0;
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-size: $small;
+    text-align: center;
+    margin: 0;
+
+    @media (min-width: $desktop) {
+      font-size: $big;
+    }
+  }
+
+  &__icon {
+    font-size: 4.5em;
+    color: $green;
+    text-align: center;
+    margin-top: 1vh;
+
+    @media (min-width: $desktop) {
+      font-size: 6em;
+      margin: 3vh 0;
+    }
+  }
+
+  &__subtitle {
+    font-size: 1.3em;
+    text-align: center;
+    margin-bottom: 1.2em;
+    line-height: 1.3;
+    @extend %typography-subtitle;
+
+    @media (min-width: $desktop) {
+      font-size: $middle;
+    }
+  }
+
+  &__message {
+    text-align: center;
+    margin: 1vh 0;
+
+    @media (min-width: $desktop) {
+      margin: 1vh 0;
+    }
+  }
+
+  &__code {
+    font-weight: $weight-b;
+    font-size: 0.9em;
+    letter-spacing: 0.15em;
+    color: $secondary-paragraph-color;
+    text-transform: uppercase;
+    border-bottom: 2px solid $black;
+    margin: 0 auto 1em auto;
+    padding-bottom: 0.3em;
+  }
+
+  &__summary {
+    text-align: center;
+    margin: 1em auto 0 auto;
+
+    @media (min-width: $desktop) {
+      margin: 3em auto 0 auto;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    margin: 3em auto;
+
+    @media (min-width: $desktop) {
+      margin: 4em auto 2em auto;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    margin: 0 auto;
+
+    @media (min-width: $desktop) {
+      margin: 0 auto;
+    }
+  }
+
+  &__return-btn {
+    text-align: center;
+  }
+}

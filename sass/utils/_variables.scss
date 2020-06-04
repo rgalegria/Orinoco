@@ -1,0 +1,46 @@
+$titles: "Oswald", sans-serif;
+$primary-title-color: #000000;
+$secondary-title-color: #5100ff;
+
+$paragraphs: "Roboto", sans-serif;
+$primary-paragraph-color: #626262;
+$secondary-paragraph-color: #000000;
+
+$big: 2.8em;
+$middle: 2.1em;
+$middle-small: 1.8em;
+$small: 1.6em;
+$smaller: 1.4em;
+
+$weight-l: 300;
+$weight-n: 400;
+$weight-m: 500;
+$weight-b: bold;
+
+$a-color: #626262;
+$a-color-hover: #5100ff;
+$dark-purple: darken($a-color-hover, 15%);
+
+/*          Page Colors          */
+
+$white: #ffffff;
+$light-grey: #f9f9f9;
+$half-grey: #f4f4f4;
+$grey: #ededed;
+$cart-grey: #e4e4e4;
+$medium-grey: #a8a8a8;
+$dark-grey: #626262;
+$black: #000000;
+$purple: #5100ff;
+$green: #00b61d;
+
+/*         Shadows       */
+
+$card-shadow: 0px 0px 7px 0px rgba(126, 126, 126, 0.3);
+
+/*      Media Queries    */
+
+$tablet: 768px;
+$desktop: 1024px;
+$intermedium: 1155px;
+$flux: 1575px;

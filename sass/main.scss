@@ -1,0 +1,24 @@
+@import "./utils/variables";
+@import "./utils/placeholders";
+@import "./utils/mixins";
+
+@import "./base/reset";
+@import "./base/fonts";
+@import "./base/animations";
+
+@import "./components/buttons";
+@import "./components/dropdown";
+@import "./components/slideshow";
+
+@import "./layouts/scrollbar";
+@import "./layouts/navigation";
+@import "./layouts/header";
+@import "./layouts/footer";
+@import "./layouts/product-list-items";
+@import "./layouts/forms";
+
+@import "./pages/home";
+@import "./pages/product-list";
+@import "./pages/product";
+@import "./pages/checkout";
+@import "./pages/payment-confirmation";

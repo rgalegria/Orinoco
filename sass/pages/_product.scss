@@ -1,0 +1,98 @@
+/*---------------------------------*/
+/*          _product.scss         */
+/*-------------------------------*/
+
+.wrapper {
+  margin-top: 130px;
+
+  @media (min-width: $desktop) {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin-top: 0;
+  }
+}
+
+.carrousel {
+  padding-top: 130px;
+
+  @media (min-width: $desktop) {
+    position: fixed;
+    padding-top: 65px;
+  }
+}
+
+.product {
+  text-align: center;
+  line-height: 1.2;
+  padding: 4em 0;
+
+  @media (min-width: $desktop) {
+    position: absolute;
+    background-color: white;
+    right: 0;
+    width: 45vw;
+    height: 100vh;
+    text-align: justify;
+    padding: 19vh 6em 6em 6em;
+    // z-index: -1;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: $big;
+    @extend %typography-title;
+  }
+
+  &__subtitle {
+    margin: 0;
+    font-size: $middle;
+    @extend %typography-subtitle;
+  }
+
+  &__price {
+    display: inline-flex;
+    font-size: 1.6em;
+    padding-bottom: 0.5em;
+    margin: 1em 0 0 0;
+    border-bottom: 3px solid $black;
+
+    @media (min-width: $desktop) {
+      margin: 1em 0;
+    }
+  }
+
+  &__dropd {
+    margin: 2em;
+    @media (min-width: $desktop) {
+      margin: 0 auto 2.5em 0;
+    }
+  }
+
+  &__description {
+    text-align: justify;
+    padding: 1em 2em;
+
+    @media (min-width: $desktop) {
+      padding: 0;
+    }
+  }
+
+  &__btn {
+    font-weight: $weight-m;
+    margin: 3em auto 0 auto;
+    width: 320px;
+
+    @media (min-width: $desktop) {
+      margin: 3em auto 0 0;
+    }
+  }
+
+  &__return-btn {
+    margin: 3em auto 0 auto;
+
+    @media (min-width: $desktop) {
+      margin: 5em auto 0 0;
+    }
+  }
+}

@@ -1,0 +1,67 @@
+/*---------------------------------*/
+/*            _home.scss          */
+/*-------------------------------*/
+
+.banner {
+  position: absolute;
+  top: 65px;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -20;
+  background: rgb(0, 0, 0)
+    url(../img/banner-orinoco-appareils-photo-vintage.jpg) center no-repeat;
+
+  @media (min-width: $desktop) {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: -20;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    @media (min-width: $desktop) {
+      height: auto;
+    }
+  }
+
+  &__foreground {
+    display: flex;
+    margin: 50vh auto 0 auto;
+    max-width: 320px;
+    padding: 1em;
+    background: rgba(0, 0, 0, 0.5);
+
+    @media (min-width: $desktop) {
+      margin: 37vh auto 0 8vw;
+      max-width: 800px;
+      padding: 2em 3em;
+    }
+  }
+
+  &__title {
+    color: $white;
+    font-size: 36px;
+    line-height: 134.2%;
+    text-align: center;
+    margin: 0;
+    text-transform: none;
+
+    @media (min-width: $desktop) {
+      font-size: 4em;
+      text-align: left;
+    }
+  }
+
+  &__btn {
+    margin: 7vh auto 0 auto;
+
+    @media (min-width: $desktop) {
+      margin: 7vh auto 0 8vw;
+    }
+  }
+}

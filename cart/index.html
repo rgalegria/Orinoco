@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="Le site web pour retrouver les meilleurs références en appareils photo vintage."
+    />
+
+    <title>Orinoco - Appareils Photo Vintage</title>
+    <link rel="canonical" href="https://rgalegria.github.io/orinoco/" />
+
+    <!-- Favicons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5100ff" />
+    <meta name="msapplication-TileColor" content="#5100ff" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Rich Card -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Store",
+        "name": "Orinoco Appareils Photo",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "7 Cité Paradis",
+          "addressLocality": "Paris",
+          "addressRegion": "",
+          "postalCode": "75010"
+        },
+        "image": "rgalegria.github.io/orinoco/favicon-32x32.png",
+        "email": "shop@orinoco.fr",
+        "telePhone": "+33 1 23 45 67 89",
+        "url": "rgalegria.github.io/orinoco",
+        "openingHours": "Mo,Tu,We,Th,Fr 09:00-19:00",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "09:00",
+            "closes": "19:00"
+          }
+        ],
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "48.874798",
+          "longitude": "2.350510"
+        },
+        "priceRange": "$"
+      }
+    </script>
+
+    <!-- Font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald:300,500,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font-awesome -->
+    <script
+      src="https://kit.fontawesome.com/a44570b978.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+
+    <!-- Main CSS -->
+    <!-- <link rel="stylesheet" href="css/main.min.css" /> -->
+
+    <!-- Javascript -->
+    <!-- <script src="/js/dropdown-menu.min.js" defer></script> -->
+    <!-- <script src="/js/cart.min.js" defer></script> -->
+    <!-- <script src="/js/form.min.js" defer></script> -->
+    <!-- <script src="/js/form-control.min.js" defer></script> -->
+    <!-- <script src="/js/product-list.min.js" defer></script> -->
+    <!-- <script src="/js/product-page.min.js" defer></script> -->
+
+    <!-- Work CSS -->
+    <link rel="stylesheet" href="/css/main.css" />
+
+    <!-- Work JavaScript -->
+    <!-- <script src="/js/dropdown-menu.js" defer></script> -->
+    <!-- <script src="/js/cart.js" defer></script> -->
+    <script src="/js/form.js" defer></script>
+    <script src="/js/form-control.js" defer></script>
+    <!-- <script src="/js/product-list.js" defer></script> -->
+    <!-- <script src="/js/product-page.js" defer></script> -->
+
+    <!-- Facebook -->
+    <meta property="og:url" content="https://rgalegria.github.io/orinoco/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Orinoco" />
+    <meta
+      property="og:description"
+      content="Le site web pour retrouver les meilleurs références en appareils photo vintage."
+    />
+    <meta
+      property="og:image"
+      content="https://rgalegria.github.io/orinoco/orinoco-social-card.jpg"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Orinoco" />
+    <meta
+      name="twitter:description"
+      content="Le site web pour retrouver les meilleurs références en appareils photo vintage."
+    />
+    <meta
+      name="twitter:image"
+      content="https://rgalegria.github.io/orinoco/orinoco-social-card.jpg"
+    />
+
+    <!-- Google Analytics -->
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "https://www.google-analytics.com/analytics.js",
+        "ga"
+      );
+
+      ga("create", "UA-XXXXX-Y", "auto");
+      ga("send", "pageview");
+    </script>
+  </head>
+  <body>
+    <main class="payment">
+      <!--Form-->
+      <form id="payment-details" class="payment__form">
+        <div class="payment__details-wrap">
+          <!-- Payment Details -->
+          <article class="details">
+            <!-- Logo -->
+            <header class="details__logo">
+              <a class="details__logo__link" href="/index.html">
+                <img
+                  src="/img/logo-orinoco-appareils-photo-vintage.png"
+                  alt="Logo de Orinoco, e-commerce d'appareils photo vintage"
+                />
+              </a>
+            </header>
+
+            <!-- Contact Form-->
+            <label for="email">Information de contact</label>
+            <div class="details__contact">
+              <input
+                id="email"
+                class="form-control form__box"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                type="email"
+                placeholder="E-mail"
+                required
+              />
+              <label class="new-checkbox"
+                >Souscrivez à notre newsletter
+                <input
+                  id="newsletter"
+                  type="checkbox"
+                  name="newsletter"
+                  value="subscribe"
+                />
+                <span class="checkmark"></span>
+              </label>
+            </div>
+
+            <!--Address Form-->
+            <label for="name">Adresse de livraison</label>
+            <div class="details__address">
+              <input
+                id="first-name"
+                class="form-control form__box"
+                type="text"
+                name="name"
+                pattern="[a-zA-Z]+"
+                autocomplete="given-name"
+                placeholder="Nom"
+                required
+              />
+              <input
+                id="last-name"
+                class="form-control form__box"
+                type="text"
+                name="lastname"
+                pattern="[a-zA-Z]+"
+                autocomplete="family-name"
+                placeholder="Prénom"
+                required
+              />
+              <input
+                id="address"
+                class="form-control form__box"
+                type="text"
+                name="address"
+                autocomplete="street-address"
+                placeholder="Adresse"
+                required
+              />
+              <input
+                id="address-complement"
+                class="form-control form__box"
+                type="text"
+                name="address-complement"
+                autocomplete="address-line1"
+                placeholder="Complément d'adresse"
+              />
+              <input
+                id="zipcode"
+                class="form-control form__box"
+                type="text"
+                inputmode="numeric"
+                pattern="[0-9]{5}"
+                min="00000"
+                max="99999"
+                name="zipcode"
+                autocomplete="postal-code"
+                minlength="4"
+                maxlength="5"
+                placeholder="Code postale (75001)"
+                required
+              />
+              <input
+                id="city"
+                class="form-control form__box"
+                type="text"
+                name="town"
+                autocomplete="address-level2"
+                placeholder="Ville"
+                required
+              />
+              <input
+                id="country"
+                class="form-control form__box"
+                type="text"
+                name="country"
+                autocomplete="country-name"
+                placeholder="Pays"
+                required
+              />
+            </div>
+
+            <!--Payement Card-->
+            <div>
+              <label for="name">Mode de paiement</label>
+              <ul class="details__icons">
+                <li class="details__icons__item">
+                  <i class="fab fa-cc-apple-pay"></i>
+                </li>
+                <li class="details__icons__item">
+                  <i class="fab fa-cc-visa"></i>
+                </li>
+                <li class="details__icons__item">
+                  <i class="fab fa-cc-mastercard"></i>
+                </li>
+                <li class="details__icons__item">
+                  <i class="fab fa-cc-amex"></i>
+                </li>
+                <li class="details__icons__item">
+                  <i class="fab fa-cc-paypal"></i>
+                </li>
+              </ul>
+
+              <!--payment details-->
+              <div class="details__card">
+                <input
+                  id="card-owner"
+                  class="form-control form__box"
+                  name="owner"
+                  type="text"
+                  placeholder="Titulaire"
+                  required
+                />
+                <input
+                  id="card-number"
+                  class="form-control form__box"
+                  pattern="([0-9][0-9][0-9][0-9])-([0-9][0-9][0-9][0-9])-([0-9][0-9][0-9][0-9])-([0-9][0-9][0-9][0-9])"
+                  inputmode="numeric"
+                  maxlength="19"
+                  name="card"
+                  autocomplete="cc-number"
+                  placeholder="Numéro de carte (0000-0000-0000-0000)"
+                  required
+                />
+                <input
+                  id="card-cvv"
+                  class="form-control form__box"
+                  type="text"
+                  name="cvv"
+                  placeholder="CVV"
+                  pattern="([1-9][1-9][1-9])"
+                  inputmode="numeric"
+                  maxlength="3"
+                  autocomplete="cc-csc"
+                  required
+                />
+                <input
+                  id="card-month"
+                  class="form-control form__box"
+                  type="text"
+                  name="month"
+                  pattern="([0][1-9]|10|11|12)"
+                  inputmode="numeric"
+                  maxlength="2"
+                  placeholder="mm"
+                  required
+                />
+                <input
+                  id="card-year"
+                  class="form-control form__box"
+                  type="text"
+                  name="year"
+                  pattern="([2][0-5])"
+                  inputmode="numeric"
+                  maxlength="2"
+                  placeholder="yy"
+                  required
+                />
+              </div>
+            </div>
+            <label class="new-checkbox"
+              >Sauvagarder mes informations pour de futurs achats
+              <input
+                id="user-details"
+                type="checkbox"
+                name="paymentdetails"
+                value="save"
+              />
+              <span class="checkmark"></span>
+            </label>
+            <footer class="payment__desktop-footer">
+              <ul class="footer__links">
+                <li class="footer__links__item">
+                  <a href="#">Méntions Légales</a>
+                </li>
+                <li class="footer__links__item">
+                  <a href="#">Livraison et retours</a>
+                </li>
+                <li class="footer__links__item">
+                  <a href="#">Aide et information</a>
+                </li>
+              </ul>
+            </footer>
+          </article>
+        </div>
+
+        <!--Cart-->
+
+        <div class="payment__cart-wrap">
+          <article class="cart">
+            <header class="cart__header">
+              <h1 class="cart__title">mon panier</h1>
+              <p class="cart__info">
+                Les articles seront réservés 30 minutes
+              </p>
+            </header>
+
+            <!--Cart product-->
+            <section class="cart__product">
+              <button id="delete-btn" class="cart__product__del-btn delete-btn">
+                <img src="../img/btn-close-icon.svg" alt="close icon" />
+              </button>
+              <div class="cart__product__wrapper-main">
+                <div class="cart__product__img">
+                  <!-- <img src="/img/vcam_3-thumb.png" alt="" /> -->
+                </div>
+
+                <div class="cart__product__wrapper-info">
+                  <h2 class="cart__product__title">Konica minolta</h2>
+                  <h3 class="cart__product__price">2200.00 &euro;</h3>
+                  <div class="lens__dropd cart__product__dropd">
+                    <select
+                      name="lenses"
+                      id="lens-option"
+                      class="lens__dropd__btn"
+                    >
+                      <option class="lens__dropd__item"
+                        >Veuillez choisir</option
+                      >
+                      <option class="lens__dropd__item"
+                        >Objectif 1:2,8 / 4,5</option
+                      >
+                      <option class="lens__dropd__item"
+                        >Objectif 1:2,8 / 2,8</option
+                      >
+                      <option class="lens__dropd__item"
+                        >Objectif 1:2,8 / 1,3</option
+                      >
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!--Cart sale-->
+            <form action="">
+              <div class="cart__product__promocode">
+                <input
+                  aria-label="Code Promo"
+                  id="sales-code"
+                  class="form-control form__box cart__product__promocode__input"
+                  type="text"
+                  placeholder="Code promo / chèque cadeau"
+                />
+                <button
+                  id="secondary-btn"
+                  class="secondary-btn cart__product__promocode__btn"
+                >
+                  Confirmer
+                </button>
+              </div>
+            </form>
+
+            <!--Cart subtotals-->
+            <div class="cart__product__division">
+              <p class="cart__product__subtotals">
+                Sous-Total<span class="cart__product__subtotals__price"
+                  >1,235 &euro;</span
+                >
+              </p>
+              <p class="cart__product__subtotals">
+                Livraison<span class="cart__product__subtotals__price"
+                  >15 &euro;</span
+                >
+              </p>
+              <p class="cart__product__subtotals">
+                TVA 22%<span class="cart__product__subtotals__price"
+                  >271.70 &euro;</span
+                >
+              </p>
+            </div>
+
+            <!--Cart CTA-->
+            <h3 class="cart__product__total">
+              Total<span class="cart__product__total__price"
+                >1,521.70 &euro;</span
+              >
+            </h3>
+            <button
+              id="submit-btn"
+              type="submit"
+              class="submit-btn cart__product__btn"
+            >
+              paiement
+            </button>
+            <div class="underlinedgrey-btn cart__product__return">
+              <a
+                class="underlinedgrey-btn__link"
+                href="/product-list/index.html"
+                >retourner au site</a
+              >
+            </div>
+          </article>
+        </div>
+      </form>
+    </main>
+    <!-- Footer -->
+    <footer class="payment__mobile-footer">
+      <ul class="footer__links">
+        <li class="footer__links__item">
+          <a href="#">Méntions Légales</a>
+        </li>
+        <li class="footer__links__item">
+          <a href="#">Livraison et retours</a>
+        </li>
+        <li class="footer__links__item">
+          <a href="#">Aide et information</a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>

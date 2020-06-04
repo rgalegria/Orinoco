@@ -1,0 +1,30 @@
+@mixin html {
+  height: 100%;
+}
+
+@mixin body {
+  font-family: $paragraphs;
+  font-weight: $weight-m;
+  color: $primary-paragraph-color;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin a {
+  font-family: $paragraphs;
+  font-weight: $weight-m;
+  color: $a-color;
+}
+
+@mixin a-hover {
+  color: $a-color-hover;
+}
+
+// @mixin menu-gradient-title($color-1, $color-2) {
+//   background: linear-gradient(to right, $color-1 0%, $color-2 100%);
+//   background-clip: text;
+//   color: rgba(0, 0, 0, 0);
+//   -webkit-background-clip: text;
+//   -webkit-text-fill-color: transparent;
+// }

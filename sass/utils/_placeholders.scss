@@ -1,0 +1,30 @@
+/*---------------------------------*/
+/*       _placeholders.scss       */
+/*-------------------------------*/
+
+%typography-title {
+  font-family: $titles;
+  font-weight: $weight-b;
+  line-height: 1.2;
+  color: $primary-title-color;
+  text-transform: uppercase;
+}
+
+%typography-subtitle {
+  // font-family: $titles;
+  font-weight: $weight-l;
+  // font-size: $middle;
+  // line-height: 1.2;
+  color: $secondary-title-color;
+  // text-transform: uppercase;
+}
+
+%typography-text {
+  font-family: $paragraphs;
+  font-weight: $weight-m;
+  color: $primary-paragraph-color;
+  text-align: justify;
+  letter-spacing: 0.05em;
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,24 @@
+/*---------------------------------*/
+/*          _dropdown.scss        */
+/*-------------------------------*/
+.dropdown {
+  position: relative;
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  padding: 6.5vh 12vw;
+
+  @media (min-width: $desktop) {
+    position: absolute;
+    top: 65px;
+    right: 0;
+    width: 45vw;
+    height: 94vh;
+    padding: 6.5vh 7vw;
+    z-index: 5;
+  }
+}
+
+.dropdown-visible {
+  display: block;
+}

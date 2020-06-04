@@ -1,0 +1,60 @@
+/*---------------------------------*/
+/*          _header.scss          */
+/*-------------------------------*/
+
+.navbar {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  background-color: $light-grey;
+  width: 100vw;
+  z-index: 5;
+
+  @media (min-width: $desktop) {
+    flex-direction: row;
+  }
+
+  &__logo {
+    height: 65px;
+    margin: auto;
+
+    @media (min-width: $desktop) {
+      margin: auto auto auto 3vw;
+    }
+
+    &__link {
+      display: block;
+      padding-top: 12px;
+    }
+  }
+
+  &__wrap {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 0;
+    margin: 0;
+    height: 65px;
+
+    @media (min-width: $desktop) {
+      width: 45vw;
+    }
+
+    &__menu {
+      background-color: $half-grey;
+      // padding: 0.8em;
+    }
+
+    &__currency {
+      background-color: $grey;
+      // padding: 0.8em;
+    }
+    &__cart {
+      background-color: $cart-grey;
+      // padding: 0.8em;
+    }
+  }
+
+  &__icons {
+    font-size: 1.2em;
+  }
+}

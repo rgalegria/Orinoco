@@ -1,0 +1,34 @@
+/*---------------------------------*/
+/*           _fonts.scss          */
+/*-------------------------------*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @extend %typography-title;
+}
+
+h1 {
+  font-size: $big;
+  @media (min-width: $desktop) {
+    font-size: $middle;
+  }
+}
+
+// h2 {
+// }
+
+// h3 {
+// }
+
+// h4 {
+// }
+
+// h5 {
+// }
+
+// h6 {
+// }

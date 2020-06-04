@@ -1,0 +1,75 @@
+/*---------------------------------*/
+/*          _footer.scss          */
+/*-------------------------------*/
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  padding: 4em 0;
+  width: 100vw;
+  background-color: $light-grey;
+
+  @media (min-width: $desktop) {
+    width: 100vw;
+    flex-direction: row;
+    padding: 0 3vw;
+    bottom: 0;
+    left: 0;
+    padding-bottom: 0;
+    height: 65px;
+    z-index: 5;
+  }
+
+  &__links {
+    text-align: center;
+    margin: auto;
+
+    @media (min-width: $desktop) {
+      display: inherit;
+      text-align: left;
+      margin: auto auto auto 0;
+    }
+
+    &__item {
+      padding: 1em;
+
+      @media (min-width: $desktop) {
+        padding: 1em 0;
+        margin-right: 1.5rem;
+      }
+    }
+  }
+
+  &__wrap {
+    margin: auto;
+
+    @media (min-width: $desktop) {
+      display: inherit;
+      flex-direction: row;
+      margin: 0;
+    }
+  }
+
+  &__text {
+    text-align: center;
+    margin-top: 3em;
+    font-weight: $weight-m;
+
+    @media (min-width: $desktop) {
+      text-align: left;
+      margin-top: 0;
+      margin: auto 1em auto auto;
+    }
+  }
+
+  &__icons {
+    display: flex;
+
+    &__item {
+      display: inherit;
+      font-size: 2em;
+      margin: 0 0.3em;
+    }
+  }
+}
