@@ -144,11 +144,6 @@
     display: flex;
     flex-direction: column;
     border-bottom: 2px solid $black;
-
-    @media (min-width: $intermedium) {
-      flex-direction: row;
-      margin-bottom: 1em;
-    }
   }
 
   &__title {
@@ -161,20 +156,19 @@
 
     @media (min-width: $desktop) {
       font-size: $middle;
-      // margin: 0;
+      // margin: ;
     }
   }
 
-  &__info {
-    @media (min-width: $intermedium) {
-      margin: auto 0 0 auto;
-    }
-  }
+  // &__info {
+  //   @media (min-width: $intermedium) {
+  //     margin: auto 0 0 auto;
+  //   }
+  // }
 
   &__product {
     display: flex;
     flex-direction: column;
-    // border-top: 2px solid $black;
     border-bottom: 2px solid $black;
     text-align: left;
 
@@ -182,85 +176,85 @@
     //   text-align: left;
     // }
 
-    &__del-btn {
-      display: flex;
-      // margin-left: auto;
-      padding-left: 0;
-    }
+    // &__del-btn {
+    //   display: flex;
+    //   // margin-left: auto;
+    //   padding-left: 0;
+    // }
 
-    &__wrapper-main {
-      display: flex;
-      flex-direction: row-reverse;
+    // &__wrapper-main {
+    //   display: flex;
+    //   flex-direction: row-reverse;
 
-      // @media (min-width: $intermedium) {
-      //   display: flex;
-      //   flex-direction: row-reverse;
-      // }
-    }
+    //   // @media (min-width: $intermedium) {
+    //   //   display: flex;
+    //   //   flex-direction: row-reverse;
+    //   // }
+    // }
 
-    &__wrapper-info {
-      margin-right: auto;
+    // &__wrapper-info {
+    //   margin-right: auto;
 
-      // @media (min-width: $intermedium) {
-      //   display: flex;
-      //   flex-direction: column;
-      //   max-width: 42%;
-      //   margin-right: auto;
-      // }
-    }
+    //   // @media (min-width: $intermedium) {
+    //   //   display: flex;
+    //   //   flex-direction: column;
+    //   //   max-width: 42%;
+    //   //   margin-right: auto;
+    //   // }
+    // }
 
-    &__img {
-      width: 32vw;
-      height: 110px;
-      margin-bottom: 2em;
-      background-image: url(http://localhost:3000/images/vcam_4.jpg);
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
+    // &__img {
+    //   width: 32vw;
+    //   height: 110px;
+    //   margin-bottom: 2em;
+    //   background-image: url(http://localhost:3000/images/vcam_4.jpg);
+    //   background-position: center;
+    //   background-size: cover;
+    //   background-repeat: no-repeat;
 
-      @media (min-width: $tablet) {
-        width: 32vw;
-        height: 122px;
-      }
+    //   @media (min-width: $tablet) {
+    //     width: 32vw;
+    //     height: 122px;
+    //   }
 
-      @media (min-width: $desktop) {
-        // height: 210px;
-        width: 15vw;
-        height: 115px;
-        margin-bottom: 0;
-      }
+    //   @media (min-width: $desktop) {
+    //     // height: 210px;
+    //     width: 15vw;
+    //     height: 115px;
+    //     margin-bottom: 0;
+    //   }
 
-      @media (min-width: 1430px) {
-        width: 215px;
-        height: 115px;
-      }
-    }
+    //   @media (min-width: 1430px) {
+    //     width: 215px;
+    //     height: 115px;
+    //   }
+    // }
 
-    &__title {
-      font-size: $middle-small;
+    // &__title {
+    //   font-size: $middle-small;
 
-      @media (min-width: $tablet) {
-        font-size: $middle;
-      }
-    }
+    //   @media (min-width: $tablet) {
+    //     font-size: $middle;
+    //   }
+    // }
 
-    &__price {
-      font-size: $smaller;
-      @extend %typography-subtitle;
+    // &__price {
+    //   font-size: $smaller;
+    //   @extend %typography-subtitle;
 
-      @media (min-width: $tablet) {
-        font-size: $middle-small;
-      }
-    }
+    //   @media (min-width: $tablet) {
+    //     font-size: $middle-small;
+    //   }
+    // }
 
-    &__dropd {
-      // margin: 1em 0;
-      margin: 0 0 2.2em 0;
+    // &__dropd {
+    //   // margin: 1em 0;
+    //   margin: 0 0 2.2em 0;
 
-      // @media (min-width: $intermedium) {
-      //   margin: 0;
-      // }
-    }
+    //   // @media (min-width: $intermedium) {
+    //   //   margin: 0;
+    //   // }
+    // }
 
     &__promocode {
       padding: 2em 0;
@@ -356,6 +350,16 @@
       // }
     }
   }
+}
+
+.error {
+  border: 1px solid $error;
+  box-shadow: 0px 0px 3px $error-shadow;
+}
+
+.good {
+  border: 1px solid $green;
+  box-shadow: 0px 0px 3px $green-shadow;
 }
 
 /*       address input boxes      */

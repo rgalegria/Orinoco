@@ -3,6 +3,7 @@
 /*-------------------------------*/
 
 .nav-btn {
+  position: relative;
   font-size: 2rem;
   font-weight: $weight-b;
   color: $primary-paragraph-color;
@@ -15,6 +16,31 @@
 
   &:focus {
     outline: none;
+  }
+}
+
+.cta-btn {
+  cursor: pointer;
+  display: flex;
+  background-color: $purple;
+  width: 320px;
+
+  &__link {
+    display: block;
+    color: $white;
+    font-size: 1.1em;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 1em 0;
+    margin: 0 auto;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  &:hover {
+    background-color: $dark-purple;
   }
 }
 

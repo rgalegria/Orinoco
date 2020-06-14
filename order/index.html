@@ -34,7 +34,7 @@
     <!-- <link rel="stylesheet" href="/css/main.min.css" /> -->
 
     <!-- Javascript -->
-    <!-- <script src="/js/app.min.js" defer></script> -->
+    <script src="/js/confirmation.js" defer></script>
     <!-- <script src="../js/app.js" defer></script> -->
     <!-- <script src="../js/form.js" defer></script> -->
     <!-- <script src="../js/form-control.js" defer></script> -->
@@ -48,13 +48,13 @@
       <article class="confirmation__wrap">
         <h2 class="confirmation__subtitle">
           Votre paiement de
-          <span class="confirmation__price">1,521 &euro;</span> a été validé par
-          votre banque
+          <span id="total-price" class="confirmation__price"></span>
+          a été validé par votre banque
         </h2>
         <p class="confirmation__message">
           Votre numéro de commande c'est :
         </p>
-        <span class="confirmation__code">WDE5HDKW54SK2020</span>
+        <span id="order-id" class="confirmation__code"></span>
         <p class="confirmation__summary">
           Sous-peu, vous recevrez un email avec votre récapitulatif d’achat sur
           votre e-mail
@@ -67,9 +67,7 @@
       </article>
       <footer class="confirmation__footer">
         <div class="underlinedgrey-btn confirmation__return-btn">
-          <a
-            class="underlinedgrey-btn__link"
-            href="../liste-de-produits/index.html"
+          <a class="underlinedgrey-btn__link" href="../product-list/index.html"
             >retourner au site</a
           >
         </div>

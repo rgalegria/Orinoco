@@ -53,7 +53,3 @@ const loadDataInDom = (result) => {
     productList.innerHTML = productList.innerHTML + html;
   });
 };
-
-const priceFormat = (price) => {
-  return parseFloat(price / 100).toFixed(2);
-};

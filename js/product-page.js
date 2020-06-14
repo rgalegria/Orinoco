@@ -1,40 +1,51 @@
 /* event listener pour executer le script un fois chargé le DOM */
 document.addEventListener("DOMContentLoaded", () => {
-  getProduct();
+  getProduct().then(data => {
+    loadProductInDOM(data).then(() => {
+      showSlide(slideIndex) // passer la réponse à loadProductInDom
+
+      /* DOM ELEMENT REFERENCES */
+      const addProductBtn = document.getElementById("add-product-btn");
+      const lensDropdown = document.getElementById("lens-option");
+
+      /* EVENT LISTENERS */
+
+      // event listener pour dropdown des objectifs
+      lensDropdown.addEventListener("change", ($event) => {
+        lensDropdownOption = $event.target.value;
+      });
+
+      // event listener pour bouton ajouter au panier
+      addProductBtn.addEventListener("click", addProduct);
+    })
+  })
 });
+
+let productObject; //variable global donde se almacena el producto
 
 /* FUNCTIONS */
 
-const getProduct = () => {
+const getProduct = async () => {
   const params = new URLSearchParams(window.location.search);
   const idProduct = params.get("id");
-  fetch("http://localhost:3000/api/cameras/" + idProduct)
-    .then((res) => res.json()) //convertir la réponse en JSON
-    .then((data) => {
-      loadProductInDOM(data); // passer la réponse à loadProductInDom
-      // console.log(data);
-      showSlide(slideIndex);
-    })
-    // Récuperer l'erreur s'il y a un
+  let response = await fetch("http://localhost:3000/api/cameras/" + idProduct)
     .catch((err) => {
       console.log("error", err);
     });
-};
-
-/* formateur du prix */
-
-const priceFormat = (price) => {
-  return parseFloat(price / 100).toFixed(2);
+  let data = await response.json();
+  productObject = data;
+  return data;
 };
 
 /* PRINT to DOM */
 
-const loadProductInDOM = (element) => {
+const loadProductInDOM = async (element) => {
+  // console.log("data", element);
   // Layout card du produit en HTML
   let objectif = "";
   element.lenses.forEach((value, index) => {
     // console.log(value);
-    objectif += `<option class="lens__dropd__item" value="${value}">${value}</option>`;
+    objectif += `<option class="lens__dropd__item" value="${value}">${value}</option>`
   });
   let html = `
     <!-- Slideshow container -->
@@ -66,15 +77,15 @@ const loadProductInDOM = (element) => {
 
         <!-- Drop button -->
         <div class="lens__dropd product__dropd">
-          <select name="lenses" id="lens-option" class="lens__dropd__btn">
-            <option class="lens__dropd__item" value="">Veuillez choisir</option>;
+          <select id="lens-option" class="lens__dropd__btn">
+            <option class="lens__dropd__item" value="none">Veuillez choisir</option>
             ${objectif}
           </select>
         </div>
 
         <!-- Product description -->
         <p class="product__description">${element.description}</p>
-        <button id="add-product" class="submit-btn product__btn">
+        <button id="add-product-btn" class="submit-btn product__btn">
           ajouter au panier
         </button>
         <div class="underlinedgrey-btn product__return-btn">
@@ -86,14 +97,10 @@ const loadProductInDOM = (element) => {
         </div>
       </article>
         `;
-  let product = document.getElementById("product-container");   // cibler l'id du conteneteur à injecter
+  let product = document.getElementById("product-container");   // cibler l'id du conteneteur
   product.innerHTML = product.innerHTML + html;   // anexer ici le layout avec l'information récuperée
+  return true;
 };
-
-
-/* DOM ELEMENT REFERENCES */
-
-const addProduct = document.getElementById("add-product");
 
 /* SLIDESHOW */
 
@@ -129,33 +136,3 @@ const currentSlide = (n) => {
   showSlide((slideIndex = n));
 };
 
-const cogerID = () => {
-  const params = new URLSearchParams(window.location.search);
-  const data = params.get("id");
-};
-
-class Product {
-  constructor(id, lens) {
-    this.id = id;
-    this.lens = lens;
-  }
-}
-
-
-const test = () => {
-  console.log("click");
-}
-
-/* EVENT LISTENERS */
-
-/* Dropdown list*/
-const lensDropdown = document.getElementById("lens-option");
-let lensDropdownOption;
-
-// event listener pour dropdown des objectifs
-lensDropdown.addEventListener("change", ($event) => {
-  lensDropdownOption = $event.target.value;
-});
-
-// event listener pour bouton ajouter au panier
-addProduct.addEventListener("click", test);

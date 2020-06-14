@@ -171,10 +171,13 @@
       </div>
 
       <!-- Navigation Btns-->
+      <!-- Main Menu Btn -->
       <div class="navbar__wrap">
         <button id="menu-btn" type="button" class="nav-btn navbar__wrap__menu">
           <img src="/img/orinoco-menu-icon.svg" alt="menu principal" />
         </button>
+
+        <!-- Currencies Btn -->
         <button
           id="currency-btn"
           type="button"
@@ -182,7 +185,10 @@
         >
           EUR
         </button>
+
+        <!-- Cart Btn -->
         <button id="cart-btn" type="button" class="nav-btn navbar__wrap__cart">
+          <div id="cart-pilot" class="nav-btn navbar__wrap__cart__pilot"></div>
           <i class="fas fa-shopping-basket navbar__icons"></i>
         </button>
       </div>
@@ -300,57 +306,34 @@
         <!-- <article class="cart"> -->
         <header class="cart__menu__header">
           <h1 class="cart__menu__title">mon panier</h1>
-          <p class="cart__menu__info">
+          <p id="articles-msg" class="cart__menu__info">
             Les articles seront réservés 30 minutes
           </p>
         </header>
 
         <!--Cart product-->
-        <section class="cart__menu__product">
-          <button
-            id="delete-btn"
-            class="cart__menu__product__del-btn delete-btn"
-          >
-            <img src="./img/btn-close-icon.svg" alt="close icon" />
-          </button>
-          <div class="cart__menu__product__wrapper-main">
-            <div class="cart__menu__product__img"></div>
-
-            <div class="cart__menu__product__wrapper-info">
-              <h2 class="cart__menu__product__title">Hirsch 400DTS</h2>
-              <h3 class="cart__menu__product__price">309900</h3>
-              <div class="lens__dropd cart__menu__product__dropd">
-                <select
-                  name="lenses"
-                  id="lens-option"
-                  class="lens__dropd__btn cart__menu__product__dropd__btn"
-                >
-                  <option class="lens__dropd__item" value=""
-                    >Veuillez choisir</option
-                  >
-                  <option class="lens__dropd__item" value=""
-                    >28-200mm 2.8/4.5</option
-                  >
-                </select>
-              </div>
-            </div>
+        <section id="empty-cart" class="cart__menu__empty">
+          <div class="cart__menu__empty__img">
+            <img src="../img/cactus.svg" alt="" />
           </div>
+          <h4>votre panier est désert</h4>
         </section>
+        <section id="cart-container" class="cart__menu__product"></section>
 
         <!--Cart CTA-->
-        <h3 class="cart__menu__product__total">
-          Total Panier<span class="cart__menu__product__total__price"
-            >1,521.70 &euro;</span
-          >
-        </h3>
-        <button
-          id="submit-btn"
-          type="submit"
-          class="submit-btn cart__menu__product__btn"
-        >
-          Aller au panier
-        </button>
-        <!-- </article> -->
+        <div id="cta-block">
+          <h3 class="cart__menu__product__total">
+            Total Panier<span
+              id="subtotal-price"
+              class="cart__menu__product__total__price"
+            ></span>
+          </h3>
+          <div class="cta-btn cart__menu__product__btn">
+            <a class="cta-btn__link" href="../cart/index.html"
+              >Aller au panier</a
+            >
+          </div>
+        </div>
       </nav>
     </header>
 

@@ -8,7 +8,7 @@
   flex-direction: column;
   background-color: $light-grey;
   width: 100vw;
-  z-index: 5;
+  z-index: 10;
 
   @media (min-width: $desktop) {
     flex-direction: row;
@@ -41,16 +41,29 @@
 
     &__menu {
       background-color: $half-grey;
-      // padding: 0.8em;
     }
 
     &__currency {
       background-color: $grey;
-      // padding: 0.8em;
     }
     &__cart {
       background-color: $cart-grey;
-      // padding: 0.8em;
+
+      &__pilot {
+        display: none;
+        position: absolute;
+        top: 13px;
+        left: 18vw;
+        width: 14px;
+        height: 14px;
+        background-color: $purple;
+        border-radius: 50%;
+        box-shadow: 0 0 6px 0 $purple;
+
+        @media (min-width: $desktop) {
+          left: 8vw;
+        }
+      }
     }
   }
 

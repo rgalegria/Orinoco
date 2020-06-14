@@ -9,8 +9,11 @@
       content="Le site web pour retrouver les meilleurs références en appareils photo vintage."
     />
 
-    <title>Orinoco - Appareils Photo Vintage</title>
-    <link rel="canonical" href="https://rgalegria.github.io/orinoco/" />
+    <title>Orinoco-Panier</title>
+    <link
+      rel="canonical"
+      href="https://rgalegria.github.io/orinoco/cart/index.html"
+    />
 
     <!-- Favicons-->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -84,51 +87,17 @@
     <!-- <link rel="stylesheet" href="css/main.min.css" /> -->
 
     <!-- Javascript -->
-    <!-- <script src="/js/dropdown-menu.min.js" defer></script> -->
     <!-- <script src="/js/cart.min.js" defer></script> -->
     <!-- <script src="/js/form.min.js" defer></script> -->
     <!-- <script src="/js/form-control.min.js" defer></script> -->
-    <!-- <script src="/js/product-list.min.js" defer></script> -->
-    <!-- <script src="/js/product-page.min.js" defer></script> -->
 
-    <!-- Work CSS -->
+    <!-- Dev. CSS -->
     <link rel="stylesheet" href="/css/main.css" />
 
-    <!-- Work JavaScript -->
-    <!-- <script src="/js/dropdown-menu.js" defer></script> -->
-    <!-- <script src="/js/cart.js" defer></script> -->
+    <!-- Dev. JavaScript -->
+    <script src="/js/cart.js" defer></script>
     <script src="/js/form.js" defer></script>
     <script src="/js/form-control.js" defer></script>
-    <!-- <script src="/js/product-list.js" defer></script> -->
-    <!-- <script src="/js/product-page.js" defer></script> -->
-
-    <!-- Facebook -->
-    <meta property="og:url" content="https://rgalegria.github.io/orinoco/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Orinoco" />
-    <meta
-      property="og:description"
-      content="Le site web pour retrouver les meilleurs références en appareils photo vintage."
-    />
-    <meta
-      property="og:image"
-      content="https://rgalegria.github.io/orinoco/orinoco-social-card.jpg"
-    />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Orinoco" />
-    <meta
-      name="twitter:description"
-      content="Le site web pour retrouver les meilleurs références en appareils photo vintage."
-    />
-    <meta
-      name="twitter:image"
-      content="https://rgalegria.github.io/orinoco/orinoco-social-card.jpg"
-    />
 
     <!-- Google Analytics -->
     <script>
@@ -224,6 +193,7 @@
                 class="form-control form__box"
                 type="text"
                 name="address"
+                pattern="[0-9]{5}[a-zA-Z0-9èâêîôû.,]"
                 autocomplete="street-address"
                 placeholder="Adresse"
                 required
@@ -249,7 +219,6 @@
                 minlength="4"
                 maxlength="5"
                 placeholder="Code postale (75001)"
-                required
               />
               <input
                 id="city"
@@ -257,14 +226,15 @@
                 type="text"
                 name="town"
                 autocomplete="address-level2"
+                pattern="[a-zA-Z]+"
                 placeholder="Ville"
-                required
               />
               <input
                 id="country"
                 class="form-control form__box"
                 type="text"
                 name="country"
+                pattern="[a-zA-Z]+"
                 autocomplete="country-name"
                 placeholder="Pays"
                 required
@@ -300,18 +270,16 @@
                   name="owner"
                   type="text"
                   placeholder="Titulaire"
-                  required
                 />
                 <input
                   id="card-number"
                   class="form-control form__box"
-                  pattern="([0-9][0-9][0-9][0-9])-([0-9][0-9][0-9][0-9])-([0-9][0-9][0-9][0-9])-([0-9][0-9][0-9][0-9])"
+                  pattern="([0-9][0-9][0-9][0-9]) ([0-9][0-9][0-9][0-9]) ([0-9][0-9][0-9][0-9]) ([0-9][0-9][0-9][0-9])"
                   inputmode="numeric"
                   maxlength="19"
                   name="card"
                   autocomplete="cc-number"
-                  placeholder="Numéro de carte (0000-0000-0000-0000)"
-                  required
+                  placeholder="Numéro de carte (0000 0000 0000 0000)"
                 />
                 <input
                   id="card-cvv"
@@ -323,7 +291,6 @@
                   inputmode="numeric"
                   maxlength="3"
                   autocomplete="cc-csc"
-                  required
                 />
                 <input
                   id="card-month"
@@ -334,7 +301,6 @@
                   inputmode="numeric"
                   maxlength="2"
                   placeholder="mm"
-                  required
                 />
                 <input
                   id="card-year"
@@ -345,7 +311,6 @@
                   inputmode="numeric"
                   maxlength="2"
                   placeholder="yy"
-                  required
                 />
               </div>
             </div>
@@ -376,7 +341,6 @@
         </div>
 
         <!--Cart-->
-
         <div class="payment__cart-wrap">
           <article class="cart">
             <header class="cart__header">
@@ -387,41 +351,7 @@
             </header>
 
             <!--Cart product-->
-            <section class="cart__product">
-              <button id="delete-btn" class="cart__product__del-btn delete-btn">
-                <img src="../img/btn-close-icon.svg" alt="close icon" />
-              </button>
-              <div class="cart__product__wrapper-main">
-                <div class="cart__product__img">
-                  <!-- <img src="/img/vcam_3-thumb.png" alt="" /> -->
-                </div>
-
-                <div class="cart__product__wrapper-info">
-                  <h2 class="cart__product__title">Konica minolta</h2>
-                  <h3 class="cart__product__price">2200.00 &euro;</h3>
-                  <div class="lens__dropd cart__product__dropd">
-                    <select
-                      name="lenses"
-                      id="lens-option"
-                      class="lens__dropd__btn"
-                    >
-                      <option class="lens__dropd__item"
-                        >Veuillez choisir</option
-                      >
-                      <option class="lens__dropd__item"
-                        >Objectif 1:2,8 / 4,5</option
-                      >
-                      <option class="lens__dropd__item"
-                        >Objectif 1:2,8 / 2,8</option
-                      >
-                      <option class="lens__dropd__item"
-                        >Objectif 1:2,8 / 1,3</option
-                      >
-                    </select>
-                  </div>
-                </div>
-              </div>
-            </section>
+            <section id="cart-container" class="cart__menu__product"></section>
 
             <!--Cart sale-->
             <form action="">
@@ -445,28 +375,34 @@
             <!--Cart subtotals-->
             <div class="cart__product__division">
               <p class="cart__product__subtotals">
-                Sous-Total<span class="cart__product__subtotals__price"
-                  >1,235 &euro;</span
-                >
+                Sous-Total<span
+                  id="subtotal-price"
+                  class="cart__product__subtotals__price"
+                ></span>
               </p>
               <p class="cart__product__subtotals">
-                Livraison<span class="cart__product__subtotals__price"
-                  >15 &euro;</span
-                >
+                Livraison<span
+                  id="shipping-price"
+                  class="cart__product__subtotals__price"
+                ></span>
               </p>
               <p class="cart__product__subtotals">
-                TVA 22%<span class="cart__product__subtotals__price"
-                  >271.70 &euro;</span
-                >
+                TVA 22%<span
+                  id="tax-price"
+                  class="cart__product__subtotals__price"
+                ></span>
               </p>
             </div>
 
             <!--Cart CTA-->
-            <h3 class="cart__product__total">
-              Total<span class="cart__product__total__price"
-                >1,521.70 &euro;</span
-              >
-            </h3>
+            <div>
+              <h3 class="cart__product__total">
+                Total<span
+                  id="grand-total"
+                  class="cart__product__total__price"
+                ></span>
+              </h3>
+            </div>
             <button
               id="submit-btn"
               type="submit"
@@ -485,6 +421,7 @@
         </div>
       </form>
     </main>
+
     <!-- Footer -->
     <footer class="payment__mobile-footer">
       <ul class="footer__links">

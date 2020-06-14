@@ -72,6 +72,7 @@
 
 .cart__menu {
   background-color: $cart-grey;
+  overflow-y: auto;
 
   &__header {
     border-bottom: 2px solid $black;
@@ -79,6 +80,17 @@
     // @media (min-width: $intermedium) {
     //   flex-direction: row;
     // }
+  }
+
+  &__empty {
+    // font-size: $smaller;
+    font-weight: $weight-n;
+    text-align: center;
+
+    &__img {
+      width: 100px;
+      margin: 4em auto;
+    }
   }
 
   &__title {
@@ -99,7 +111,7 @@
   &__product {
     display: flex;
     flex-direction: column;
-    border-bottom: 2px solid $black;
+
     // text-align: center;
     text-align: left;
 
@@ -180,6 +192,18 @@
       &__btn {
         padding: 1em 0em 0.6em 0;
       }
+
+      &__lens {
+        display: inline-block;
+        font-weight: bold;
+        font-size: 0.9em;
+        letter-spacing: 0.15em;
+        color: #000000;
+        text-transform: uppercase;
+        border-bottom: 2px solid #000000;
+        margin: 1.1em 0 0 0;
+        padding-bottom: 0.3em;
+      }
     }
 
     &__total {
@@ -195,14 +219,14 @@
     }
 
     &__btn {
-      // width: 250px;
-      // margin: 0;
-      // margin-left: auto;
+      width: 100%;
+      margin: 0;
+      margin-bottom: 10em;
 
       @media (min-width: $tablet) {
         width: 250px;
-        margin: 0;
         margin-left: auto;
+        margin-bottom: 0;
       }
     }
   }
@@ -215,4 +239,16 @@
     font-family: $titles;
     color: $purple;
   }
+}
+
+#articles-msg {
+  display: none;
+}
+
+#empty-cart {
+  display: block;
+}
+
+#cta-block {
+  display: none;
 }
