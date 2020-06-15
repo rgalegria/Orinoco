@@ -27,38 +27,22 @@ const newsletterResult = document.getElementById("newsletter");
 const userDetailsResult = document.getElementById("user-details");
 
 /* Dropdown list*/
-const lensDropdown = document.getElementById("lens-cart-option");
-let lensDropdownOption;
+// let lensDropdownOption;
 
 /* buttons */
 const submitButton = document.getElementById("submit-btn");
-
 
 /* API Url */
 const api = "http://localhost:3000/api/cameras/order";
 
 /* FUNCTIONS */
 
-const postOrder = async function (data) {
-  let request = await fetch(api, {
-    method: 'POST',
-    headers: {
-      'content-type': 'application/json'
-    },
-    body: JSON.stringify(data)
-  })
-  let responseData = await request.json();
-  // console.log(responseData);
-  window.location.assign(`../order/index.html?id=${responseData.orderId}&total=${totalCart}`);
-}
-
-/* EVENT LISTENERS */
-
 /* Take form field info*/
 form.addEventListener("submit", async ($event) => {
   $event.preventDefault();
-  // let ret = validate();
-  if (lensDropdownOption.value != "none") {
+  // let validation = validate();
+  if (validation === true) {
+    // if (lensDropdownOption.value != "none") {
     let cameraIndex = [];
     let cart = getCart();
     for (productIndex in cart) {
@@ -76,10 +60,28 @@ form.addEventListener("submit", async ($event) => {
     });
     // form.reset();
     // promoForm.reset();
+    // } else {
+    //   alert("Veillez rentrer un option d'objectif");
+    // }
   } else {
-    alert("Veillez rentrer un option d'objectif");
+    alert("Veillez verifier les champs suivantes :");
   }
 });
+
+const postOrder = async (data) => {
+  let request = await fetch(api, {
+    method: 'POST',
+    headers: {
+      'content-type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  })
+  let responseData = await request.json();
+  // console.log(responseData);
+  window.location.assign(`../order/index.html?id=${responseData.orderId}&total=${totalCart}`);
+}
+
+/* EVENT LISTENERS */
 
 /* Newsletter checkbox */
 document.getElementById("newsletter").addEventListener("change", ($event) => {
@@ -99,8 +101,7 @@ document.getElementById("user-details").addEventListener("change", ($event) => {
   }
 });
 
-// /* Dropdown list */
-
+/* Dropdown list */
 // lensDropdown.addEventListener("change", ($event) => {
 //   lensDropdownOption = $event.target.value;
 // });

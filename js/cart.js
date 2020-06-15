@@ -1,21 +1,18 @@
 /* event listener pour executer le script un fois chargé le DOM */
 document.addEventListener("DOMContentLoaded", () => {
-    // if () {
-
-    // } else {
-
-    // }
     fillCart();
+    // setlensDropdownDomElement();
 });
 
-const cartPath = "/cart/index.html";
-const actualPath = new URL(window.location);
-
+// DOM ELEMENT REFERENCES
 const reservedCamerasMsg = document.getElementById("articles-msg");
 const emptyCartMsg = document.getElementById("empty-cart");
 const ctaBlock = document.getElementById("cta-block");
 const cartPilot = document.getElementById("cart-pilot");
 
+
+const cartPath = "/cart/index.html";
+const actualPath = new URL(window.location);
 let subTotalCart = 0;
 let shippingCost = 0;
 let totalCart = 0;
@@ -30,12 +27,6 @@ class Product {
 }
 
 
-/* carrito menu
-hacer que aparezca el total del carrito
-hacer que aparezca el boton de ir al carrito
-*/
-
-
 /**
  * @description crea y llena el carrito
  */
@@ -43,8 +34,8 @@ const fillCart = () => {
     // obteniendo info del localStorage 
     let cartStorage = getCart();
     // console.log(cartStorage);
+    // si el carrito ya existe 
     if (cartStorage !== null) {
-        // si el carrito ya existe 
         if (Object.keys(cartStorage).length > 0) {
             for (productIndex in cartStorage) {
                 // recorra cada item del objeto del carrito
@@ -152,8 +143,8 @@ const calculateTotalPrice = (cameraPrice, operation) => {
 const addProductToCart = (selectedCamera) => {
     // console.log("selectedCamera", selectedCamera);
     // Layout card du produit en HTML
-    let lensBlock = "";
     let lensOptions = "";
+    let lensBlock = "";
     selectedCamera.lenses.forEach((value) => {
         // console.log(value);
         let selected;
@@ -304,6 +295,20 @@ const updateCart = (cartStorage) => {
     cartStorage = JSON.stringify(cartStorage); // convertir a string para alojar en localStorage
     localStorage.setItem("cart", cartStorage) // Alojar en el LocalStorage
     changeCartVisual();
+}
+
+
+
+const setlensDropdownDomElement = () => {
+    setTimeout(() => {
+        if (actualPath.pathname === cartPath) {
+            /* Dropdown list*/
+            const lensDropdown = document.getElementById("lens-cart-option");
+            console.log(lensDropdown);
+        } else {
+            return
+        }
+    }, 500);
 }
 
 
