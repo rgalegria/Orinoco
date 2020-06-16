@@ -18,10 +18,6 @@
     font-size: $small;
     text-align: center;
     margin: 0;
-
-    @media (min-width: $desktop) {
-      font-size: $big;
-    }
   }
 
   &__icon {
@@ -31,7 +27,6 @@
     margin-top: 1vh;
 
     @media (min-width: $desktop) {
-      font-size: 6em;
       margin: 3vh 0;
     }
   }
@@ -42,10 +37,6 @@
     margin-bottom: 1.2em;
     line-height: 1.3;
     @extend %typography-subtitle;
-
-    @media (min-width: $desktop) {
-      font-size: $middle;
-    }
   }
 
   &__message {
@@ -64,6 +55,7 @@
     color: $secondary-paragraph-color;
     text-transform: uppercase;
     border-bottom: 2px solid $black;
+    text-align: center;
     margin: 0 auto 1em auto;
     padding-bottom: 0.3em;
   }

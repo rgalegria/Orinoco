@@ -52,11 +52,17 @@ const loadProductInDOM = async (element) => {
       <div class="slideshow">
 
         <!-- Slideshow img -->
-        <div id="slide" class="slideshow__slide fade hide" style="background-image: url(${element.imageUrl}); background-position: center; background-size: cover; background-repeat: no-repeat; background-color: white;"></div>
+        <div id="slide" 
+        class="slideshow__slide fade hide" 
+        style="background-image: url(${element.imageUrl}); background-position: center; background-size: cover; background-repeat: no-repeat; background-color: white;"></div>
 
-        <div id="slide" class="slideshow__slide fade hide" style="background-image: url(${element.imageUrl}); background-position: center; background-size: cover; background-repeat: no-repeat; background-color: white;"></div>
+        <div id="slide" 
+        class="slideshow__slide fade hide" 
+        style="background-image: url(${element.imageUrl}); background-position: center; background-size: cover; background-repeat: no-repeat; background-color: white;"></div>
 
-        <div id="slide" class="slideshow__slide fade hide" style="background-image: url(${element.imageUrl}); background-position: center; background-size: cover; background-repeat: no-repeat; background-color: white;"></div>
+        <div id="slide" 
+        class="slideshow__slide fade hide" 
+        style="background-image: url(${element.imageUrl}); background-position: center; background-size: cover; background-repeat: no-repeat; background-color: white;"></div>
         
         <!-- Next and previous buttons -->
         <a class="prev-btn" onclick="plusSlide(-1)">&#10094;</a>
@@ -85,15 +91,12 @@ const loadProductInDOM = async (element) => {
 
         <!-- Product description -->
         <p class="product__description">${element.description}</p>
-        <button id="add-product-btn" class="submit-btn product__btn">
-          ajouter au panier
-        </button>
+        <button id="add-product-btn" class="submit-btn product__btn">ajouter au panier</button>
         <div class="underlinedgrey-btn product__return-btn">
           <a
             class="underlinedgrey-btn__link"
-            href="/product-list/index.html"
-            >retourner à la liste</a
-          >
+            href="/product-list/"
+            >retourner à la liste</a>
         </div>
       </article>
         `;

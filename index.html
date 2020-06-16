@@ -62,7 +62,7 @@
       }
     </script>
 
-    <!-- Font -->
+    <!-- Fonts -->
     <link
       href="https://fonts.googleapis.com/css?family=Oswald:300,500,700&display=swap"
       rel="stylesheet"
@@ -81,26 +81,18 @@
     ></script>
 
     <!-- Main CSS -->
-    <!-- <link rel="stylesheet" href="css/main.min.css" /> -->
+    <!-- <link rel="stylesheet" href="/css/main.min.css" /> -->
 
     <!-- Javascript -->
     <!-- <script src="/js/dropdown-menu.min.js" defer></script> -->
     <!-- <script src="/js/cart.min.js" defer></script> -->
-    <!-- <script src="/js/form.min.js" defer></script> -->
-    <!-- <script src="/js/form-control.min.js" defer></script> -->
-    <!-- <script src="/js/product-list.min.js" defer></script> -->
-    <!-- <script src="/js/product-page.min.js" defer></script> -->
 
-    <!-- Work CSS -->
-    <link rel="stylesheet" href="css/main.css" />
+    <!-- Dev. CSS -->
+    <link rel="stylesheet" href="/css/main.css" />
 
-    <!-- Work JavaScript -->
-    <script src="js/dropdown-menu.js" defer></script>
-    <script src="js/cart.js" defer></script>
-    <!-- <script src="/js/form.js" defer></script> -->
-    <!-- <script src="/js/form-control.js" defer></script> -->
-    <!-- <script src="/js/product-list.js" defer></script> -->
-    <!-- <script src="/js/product-page.js" defer></script> -->
+    <!-- Dev. JavaScript -->
+    <script src="/js/dropdown-menu.js" defer></script>
+    <script src="/js/cart.js" defer></script>
 
     <!-- Facebook -->
     <meta property="og:url" content="https://rgalegria.github.io/orinoco/" />
@@ -162,7 +154,7 @@
     <header class="navbar">
       <!-- Navigation logo-->
       <div class="navbar__logo">
-        <a class="navbar__logo__link" href="./index.html">
+        <a class="navbar__logo__link" href="/">
           <img
             src="img/logo-orinoco-appareils-photo-vintage.png"
             alt="Logo de Orinoco, e-commerce d'appareils photo vintage"
@@ -173,13 +165,19 @@
       <!-- Navigation Btns-->
       <!-- Main Menu Btn -->
       <div class="navbar__wrap">
-        <button id="menu-btn" type="button" class="nav-btn navbar__wrap__menu">
+        <button
+          id="menu-btn"
+          aria-label="menu principal"
+          type="button"
+          class="nav-btn navbar__wrap__menu"
+        >
           <img src="/img/orinoco-menu-icon.svg" alt="menu principal" />
         </button>
 
         <!-- Currencies Btn -->
         <button
           id="currency-btn"
+          aria-label="menu divises"
           type="button"
           class="nav-btn navbar__wrap__currency"
         >
@@ -187,7 +185,12 @@
         </button>
 
         <!-- Cart Btn -->
-        <button id="cart-btn" type="button" class="nav-btn navbar__wrap__cart">
+        <button
+          id="cart-btn"
+          aria-label="panier"
+          type="button"
+          class="nav-btn navbar__wrap__cart"
+        >
           <div id="cart-pilot" class="nav-btn navbar__wrap__cart__pilot"></div>
           <i class="fas fa-shopping-basket navbar__icons"></i>
         </button>
@@ -204,14 +207,12 @@
             <li>
               <a
                 class="main__menu__link main__menu__link--active menu-hover"
-                href="./index.html"
+                href="/"
                 >home</a
               >
             </li>
             <li>
-              <a
-                class="main__menu__link menu-hover"
-                href="./product-list/index.html"
+              <a class="main__menu__link menu-hover" href="/product-list/"
                 >liste de produits</a
               >
             </li>
@@ -239,7 +240,7 @@
             </li>
             <li>
               E-mal :
-              <a class="menu-hover" href="mailto:e-mal : shop@orinoco.fr"
+              <a class="menu-hover" href="mailto:shop@orinoco.fr"
                 >shop@orinoco.fr</a
               >
             </li>
@@ -262,7 +263,6 @@
             </li>
             <li class="main__menu__networks__item">
               <a
-                aria-label=""
                 class="main__menu__networks__link menu-hover"
                 href="https://www.twitter.com"
                 ><i class="fab fa-twitter"></i
@@ -303,7 +303,6 @@
 
       <!-- Navigation Cart-->
       <nav id="cart-menu" class="cart__menu dropdown" aria-label="panier">
-        <!-- <article class="cart"> -->
         <header class="cart__menu__header">
           <h1 class="cart__menu__title">mon panier</h1>
           <p id="articles-msg" class="cart__menu__info">
@@ -314,9 +313,12 @@
         <!--Cart product-->
         <section id="empty-cart" class="cart__menu__empty">
           <div class="cart__menu__empty__img">
-            <img src="../img/cactus.svg" alt="" />
+            <img
+              src="/img/cactus.svg"
+              alt="image d'un cactus indiquand la manque de produits dans le panier d'orinoco"
+            />
           </div>
-          <h4>votre panier est désert</h4>
+          <h4>votre panier est vide</h4>
         </section>
         <section id="cart-container" class="cart__menu__product"></section>
 
@@ -329,9 +331,7 @@
             ></span>
           </h3>
           <div class="cta-btn cart__menu__product__btn">
-            <a class="cta-btn__link" href="../cart/index.html"
-              >Aller au panier</a
-            >
+            <a class="cta-btn__link" href="/cart/">Aller au panier</a>
           </div>
         </div>
       </nav>
@@ -346,9 +346,7 @@
         </h1>
       </section>
       <div class="banner__btn cta-btn">
-        <a class="cta-btn__link" href="./product-list/index.html"
-          >voir les produits</a
-        >
+        <a class="cta-btn__link" href="/product-list/">voir les produits</a>
       </div>
     </article>
 

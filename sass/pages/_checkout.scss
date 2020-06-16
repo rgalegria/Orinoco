@@ -86,7 +86,7 @@
       grid-template: repeat(4, 1fr) / repeat(6, 1fr);
       grid-gap: 0 8px;
       grid-template-areas:
-        "fn fn fn ln ln ln"
+        "ln ln ln fn fn fn"
         "ad ad ad ad ad ad"
         "co co co co co co"
         "zc zc ty ty ry ry";

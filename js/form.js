@@ -35,14 +35,14 @@ const submitButton = document.getElementById("submit-btn");
 /* API Url */
 const api = "http://localhost:3000/api/cameras/order";
 
+
 /* FUNCTIONS */
 
 /* Take form field info*/
 form.addEventListener("submit", async ($event) => {
   $event.preventDefault();
-  // let validation = validate();
+  let validation = validateForm();
   if (validation === true) {
-    // if (lensDropdownOption.value != "none") {
     let cameraIndex = [];
     let cart = getCart();
     for (productIndex in cart) {
@@ -58,11 +58,8 @@ form.addEventListener("submit", async ($event) => {
       },
       products: cameraIndex
     });
-    // form.reset();
-    // promoForm.reset();
-    // } else {
-    //   alert("Veillez rentrer un option d'objectif");
-    // }
+    form.reset();
+    promoForm.reset();
   } else {
     alert("Veillez verifier les champs suivantes :");
   }
@@ -105,3 +102,59 @@ document.getElementById("user-details").addEventListener("change", ($event) => {
 // lensDropdown.addEventListener("change", ($event) => {
 //   lensDropdownOption = $event.target.value;
 // });
+
+
+
+/**
+ * @description Ejecuta cada una de las validaciones necesarias para el formulario
+ */
+const validateForm = () => {
+  const lensDropdown = document.getElementById("lens-cart-option");
+
+  /* Regular Expressions */
+  const regExEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1, 3}\.[0-9]{1, 3}\.[0-9]{1, 3}\.[0-9]{1, 3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  const regExText = /^[a-zA-Z- àáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð]{2,30}$/;
+  const regExAddress = /^\d{1,7}( |-)?([a-zA-Z]|\d)*(\s[a-zA-Z-\'?]+\.?){1,3}/;
+  const regExCity = /^[a-zA-Z -àáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð]{1,85}$/;
+
+  /* Verification by field */
+  const isEmailOk = validateField(emailInput, regExEmail);
+  const isLastNameOk = validateField(lastNameInput, regExText);
+  const isFirstNameOk = validateField(firstNameInput, regExText);
+  const isAddressOk = validateField(addressInput, regExAddress);
+  const isCityOk = validateField(cityInput, regExCity);
+
+  // console.log("email:", isEmailOk, "Name:", isFirstNameOk, "Lastname:", isLastNameOk, "Address:", isAddressOk, "City:", isCityOk);
+  if (isEmailOk && isLastNameOk && isFirstNameOk && isAddressOk && isCityOk === true) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+/**
+ * 
+ * @param {Object} inputField 
+ * @param {String} pattern 
+ * @description compara el texto del input con un patron para verificar la information
+ */
+const validateField = (inputField, pattern) => {
+  let regex = new RegExp(pattern, "g");
+  let rex = regex.test(inputField.value);
+  if (!rex) {
+    if (inputField.classList.contains("good")) {
+      inputField.classList.remove("good");
+      inputField.classList.add("error");
+    } else {
+      inputField.classList.add("error");
+    }
+  } else {
+    if (inputField.classList.contains("error")) {
+      inputField.classList.remove("error");
+      inputField.classList.add("good");
+    } else {
+      inputField.classList.add("good");
+    }
+  }
+  return rex;
+}

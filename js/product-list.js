@@ -40,13 +40,12 @@ const loadDataInDom = (result) => {
               <div class="underlined-btn ${className}__btn">
                 <a
                   class="underlined-btn__link"
-                  href="../product/index.html?id=${element._id}"
+                  href="/product/index.html?id=${element._id}"
                   >voir plus</a
                 >
               </div>
             </div>
-        </section>
-        `;
+        </section>`;
     // apunta el id del contenedor a inyectar
     let productList = document.getElementById("debut");
     // anexar aqui la tarjeta con los resultados

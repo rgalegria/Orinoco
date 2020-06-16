@@ -1,7 +1,6 @@
 /* event listener pour executer le script un fois chargé le DOM */
 document.addEventListener("DOMContentLoaded", () => {
     fillCart();
-    // setlensDropdownDomElement();
 });
 
 // DOM ELEMENT REFERENCES
