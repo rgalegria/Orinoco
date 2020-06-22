@@ -16,12 +16,10 @@
   }
 
   &__slide {
-    // position: absolute;
     width: 100vw;
     height: 80vw;
     top: 0;
     left: 0;
-    // top: 130px;
 
     @media (min-width: $desktop) {
       width: 55vw;

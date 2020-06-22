@@ -64,7 +64,6 @@
 
   &__link {
     display: block;
-    // font-size: 1.6em;
     padding: 0.6rem 0;
     text-transform: uppercase;
   }
@@ -76,14 +75,9 @@
 
   &__header {
     border-bottom: 2px solid $black;
-
-    // @media (min-width: $intermedium) {
-    //   flex-direction: row;
-    // }
   }
 
   &__empty {
-    // font-size: $smaller;
     font-weight: $weight-n;
     text-align: center;
 
@@ -102,48 +96,27 @@
 
   &__info {
     margin: auto 0 1em auto;
-
-    // @media (min-width: $intermedium) {
-    //   margin: auto 0 1em auto;
-    // }
   }
 
   &__product {
     display: flex;
     flex-direction: column;
-
-    // text-align: center;
     text-align: left;
-
-    // @media (min-width: $intermedium) {
-    //   text-align: left;
-    // }
 
     &__del-btn {
       display: flex;
-      // margin-left: auto;
       padding-left: 0;
     }
 
     &__wrapper-main {
       display: flex;
       flex-direction: row-reverse;
-
-      // @media (min-width: $intermedium) {
-      //   display: flex;
-      //   flex-direction: row-reverse;
-      // }
     }
 
     &__img {
-      // height: 56vw;
-      // margin-bottom: 2em;
-      background-image: url(http://localhost:3000/images/vcam_4.jpg);
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
-      // width: 40%;
-      // height: 105px;
       width: 25vw;
       height: 100px;
 
@@ -155,24 +128,12 @@
     &__wrapper-info {
       display: flex;
       flex-direction: column;
-      // max-width: 50%;
       max-width: 50vw;
       margin-right: auto;
-
-      // @media (min-width: $intermedium) {
-      //   display: flex;
-      //   flex-direction: column;
-      //   max-width: 50%;
-      //   margin-right: auto;
-      // }
     }
 
     &__title {
       font-size: $small;
-
-      // @media (min-width: $desktop) {
-      //   font-size: $small;
-      // }
     }
 
     &__price {
@@ -181,13 +142,7 @@
     }
 
     &__dropd {
-      // margin: 1em 0;
-      // margin: 0;
       margin: 0 0 2.2em 0;
-
-      // @media (min-width: $intermedium) {
-      //   margin: 0;
-      // }
 
       &__btn {
         padding: 1em 0em 0.6em 0;

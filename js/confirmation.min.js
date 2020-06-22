@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",()=>{printOrderInfo()});const printOrderInfo=()=>{const t=document.getElementById("total-price"),e=document.getElementById("order-id"),n=new URL(window.location.href);let o=n.searchParams.get("id"),r=n.searchParams.get("total");t.textContent=parseFloat(r/100).toFixed(2)+" €",e.textContent=o,localStorage.clear()};

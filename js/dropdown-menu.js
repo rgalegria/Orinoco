@@ -45,16 +45,6 @@ const toggleVisibleCart = () => {
   }
 };
 
-/* a verifier!!! */
-window.addEventListener("mouseup", (event) => {
-  menuArray.forEach((id) => {
-    let menu = document.getElementById(id);
-    if (event.target !== menu && event.target.parentNode !== menu) {
-      menu.classList.remove("dropdown-visible");
-    }
-  });
-});
-
 /* EVENT LISTENERS */
 
 startMenuBtn.addEventListener("click", toggleVisibleMenu);

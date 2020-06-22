@@ -469,35 +469,6 @@ h1 {
 }
 
 /*---------------------------------*/
-/*         _animations.scss       */
-/*-------------------------------*/
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-          animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-/*---------------------------------*/
 /*          _buttons.scss         */
 /*-------------------------------*/
 .nav-btn {
@@ -1021,7 +992,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 .cart__menu__product__img {
-  background-image: url(http://localhost:3000/images/vcam_4.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1600,7 +1570,7 @@ body::-webkit-scrollbar-thumb {
   width: 100vw;
   height: 100vh;
   z-index: -20;
-  background: black url(../img/banner-orinoco-appareils-photo-vintage.jpg) center no-repeat;
+  background: black url(/img/banner-orinoco-appareils-photo-vintage.jpg) center no-repeat;
 }
 
 @media (min-width: 1024px) {

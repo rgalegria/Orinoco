@@ -9,8 +9,8 @@
   width: 100vw;
   height: 100vh;
   z-index: -20;
-  background: rgb(0, 0, 0)
-    url(../img/banner-orinoco-appareils-photo-vintage.jpg) center no-repeat;
+  background: rgb(0, 0, 0) url(/img/banner-orinoco-appareils-photo-vintage.jpg)
+    center no-repeat;
 
   @media (min-width: $desktop) {
     top: 0;

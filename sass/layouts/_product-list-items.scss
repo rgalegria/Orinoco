@@ -8,7 +8,6 @@
   @media (min-width: $desktop) {
     display: flex;
     flex-direction: row;
-    // margin: 0 auto;
     padding: 6em 2em;
     max-width: 1350px;
     width: 100vw;
@@ -21,7 +20,6 @@
       border-right: 3px solid $black;
       margin-bottom: 0;
       padding-right: 6vw;
-      // margin: auto 0;
       min-width: 55%;
     }
   }
@@ -35,12 +33,6 @@
     @media (min-width: $desktop) {
       height: 29.8vh;
     }
-
-    // @media (min-width: $flux) {
-    //   padding-right: 6em;
-    //   width: 571.36px;
-    //   height: 287.56px;
-    // }
   }
 
   &__border {
@@ -71,10 +63,6 @@
   &__subtitle {
     font-size: $middle;
     @extend %typography-subtitle;
-
-    // @media (min-width: $desktop) {
-    //   font-size: 2.3em;
-    // }
   }
 
   &__description {
@@ -97,7 +85,6 @@
   @media (min-width: $desktop) {
     display: flex;
     flex-direction: row-reverse;
-    // margin: 0 auto;
     padding: 6em 2em;
     max-width: 1350px;
     width: 100vw;
@@ -110,12 +97,7 @@
       border-left: 3px solid $black;
       margin-bottom: 0;
       padding-left: 6vw;
-      // margin: auto 0;
       min-width: 53%;
-
-      // @media (min-width: $flux) {
-      //   min-width: auto;
-      // }
     }
   }
 
@@ -128,12 +110,6 @@
     @media (min-width: $desktop) {
       height: 29.8vh;
     }
-
-    // @media (min-width: $flux) {
-    //   padding-left: 6em;
-    //   width: 571.36px;
-    //   height: 287.56px;
-    // }
   }
 
   &__border {
@@ -166,10 +142,6 @@
   &__subtitle {
     font-size: $middle;
     @extend %typography-subtitle;
-
-    // @media (min-width: $desktop) {
-    //   font-size: 2.3em;
-    // }
   }
 
   &__description {
