@@ -168,6 +168,8 @@
                 class="form-control form__box"
                 type="text"
                 name="lastname"
+                minlength="2"
+                maxlength="30"
                 autocomplete="family-name"
                 placeholder="Nom"
                 required
@@ -177,6 +179,8 @@
                 class="form-control form__box"
                 type="text"
                 name="name"
+                minlength="2"
+                maxlength="30"
                 autocomplete="given-name"
                 placeholder="Prénom"
                 required
@@ -186,6 +190,8 @@
                 class="form-control form__box"
                 type="text"
                 name="address"
+                minlength="6"
+                maxlength="60"
                 autocomplete="street-address"
                 placeholder="Adresse"
                 required
@@ -205,7 +211,7 @@
                 type="text"
                 inputmode="numeric"
                 pattern="[0-9]{5}"
-                min="000"
+                min="00000"
                 max="99999"
                 name="zipcode"
                 autocomplete="postal-code"
@@ -219,6 +225,8 @@
                 class="form-control form__box"
                 type="text"
                 name="town"
+                minlength="1"
+                maxlength="85"
                 autocomplete="address-level2"
                 placeholder="Ville"
               />
@@ -362,9 +370,9 @@
                   disabled
                 />
                 <button
-                  disabled
                   id="secondary-btn"
                   class="secondary-btn cart__product__promocode__btn"
+                  disabled
                 >
                   Confirmer
                 </button>

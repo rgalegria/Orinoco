@@ -412,3 +412,7 @@
 #card-year {
   grid-area: y;
 }
+
+input:disabled {
+  background-color: $half-grey;
+}

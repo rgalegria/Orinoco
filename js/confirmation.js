@@ -1,8 +1,12 @@
-// event listener para ejecutar cuando el DOM ya haya cargado
+// event listener pour exécuter la fonction une fois le DOM est déjà chargé
 document.addEventListener("DOMContentLoaded", () => {
     printOrderInfo();
 });
 
+
+/**
+ * @description Imprime dans le DOM le numéro de commande ainsi que le prix total formaté
+ */
 const printOrderInfo = () => {
     const totalPriceInput = document.getElementById("total-price");
     const orderIdInput = document.getElementById("order-id");

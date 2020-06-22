@@ -2257,6 +2257,10 @@ body::-webkit-scrollbar-thumb {
   grid-area: y;
 }
 
+input:disabled {
+  background-color: #f4f4f4;
+}
+
 /*---------------------------------*/
 /*  _confirmation-payments.scss   */
 /*-------------------------------*/

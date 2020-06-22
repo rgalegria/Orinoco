@@ -1,10 +1,10 @@
-/* event listener pour executer le script un fois chargé le DOM */
+// event listener pour exécuter la fonction une fois le DOM est déjà chargé
 document.addEventListener("DOMContentLoaded", () => {
-  getProduct().then(data => {
+  getProduct().then((data) => {
     loadProductInDOM(data).then(() => {
-      showSlide(slideIndex) // passer la réponse à loadProductInDom
+      showSlide(slideIndex);
 
-      /* DOM ELEMENT REFERENCES */
+      // RÉFÉRENCES DES ÉLÉMENTS DU DOM
       const addProductBtn = document.getElementById("add-product-btn");
       const lensDropdown = document.getElementById("lens-option");
 
@@ -17,35 +17,41 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // event listener pour bouton ajouter au panier
       addProductBtn.addEventListener("click", addProduct);
-    })
-  })
+    });
+  });
 });
 
-let productObject; //variable global donde se almacena el producto
+/* VARIABLES GLOBALES */
+
+let productObject;
+let slideIndex = 1;
 
 /* FUNCTIONS */
 
+/**
+ * @description Récupère l'id du produit dans du query string de l'URL et fait une requête a l'API par ID.
+ * @returns l'objet du produit en JSON
+ */
 const getProduct = async () => {
   const params = new URLSearchParams(window.location.search);
   const idProduct = params.get("id");
-  let response = await fetch("http://localhost:3000/api/cameras/" + idProduct)
-    .catch((err) => {
-      console.log("error", err);
-    });
+  let response = await fetch(apiGetUrl + idProduct).catch((err) => {
+    console.log("error", err);
+  });
   let data = await response.json();
   productObject = data;
   return data;
 };
 
-/* PRINT to DOM */
-
+/**
+ *
+ * @param {String} element les valeurs a l'interieur de l'objet JSON du produit
+ * @description Elle imprime le block HTML sur le DOM pour chaque element dans le JSON de l'API
+ */
 const loadProductInDOM = async (element) => {
-  // console.log("data", element);
-  // Layout card du produit en HTML
-  let objectif = "";
-  element.lenses.forEach((value, index) => {
-    // console.log(value);
-    objectif += `<option class="lens__dropd__item" value="${value}">${value}</option>`
+  let lens = "";
+  element.lenses.forEach((value) => {
+    lens += `<option class="lens__dropd__item" value="${value}">${value}</option>`;
   });
   let html = `
     <!-- Slideshow container -->
@@ -54,15 +60,21 @@ const loadProductInDOM = async (element) => {
         <!-- Slideshow img -->
         <div id="slide" 
         class="slideshow__slide fade hide" 
-        style="background-image: url(${element.imageUrl}); background-position: center; background-size: cover; background-repeat: no-repeat; background-color: white;"></div>
+        style="background-image: url(${
+          element.imageUrl
+        }); background-position: center; background-size: cover; background-repeat: no-repeat; background-color: white;"></div>
 
         <div id="slide" 
         class="slideshow__slide fade hide" 
-        style="background-image: url(${element.imageUrl}); background-position: center; background-size: cover; background-repeat: no-repeat; background-color: white;"></div>
+        style="background-image: url(${
+          element.imageUrl
+        }); background-position: center; background-size: cover; background-repeat: no-repeat; background-color: white;"></div>
 
         <div id="slide" 
         class="slideshow__slide fade hide" 
-        style="background-image: url(${element.imageUrl}); background-position: center; background-size: cover; background-repeat: no-repeat; background-color: white;"></div>
+        style="background-image: url(${
+          element.imageUrl
+        }); background-position: center; background-size: cover; background-repeat: no-repeat; background-color: white;"></div>
         
         <!-- Next and previous buttons -->
         <a class="prev-btn" onclick="plusSlide(-1)">&#10094;</a>
@@ -85,7 +97,7 @@ const loadProductInDOM = async (element) => {
         <div class="lens__dropd product__dropd">
           <select id="lens-option" class="lens__dropd__btn">
             <option class="lens__dropd__item" value="none">Veuillez choisir</option>
-            ${objectif}
+            ${lens}
           </select>
         </div>
 
@@ -100,15 +112,18 @@ const loadProductInDOM = async (element) => {
         </div>
       </article>
         `;
-  let product = document.getElementById("product-container");   // cibler l'id du conteneteur
-  product.innerHTML = product.innerHTML + html;   // anexer ici le layout avec l'information récuperée
+  let product = document.getElementById("product-container");
+  product.innerHTML = product.innerHTML + html;
   return true;
 };
 
-/* SLIDESHOW */
+/* Slideshow */
 
-let slideIndex = 1;
-
+/**
+ *
+ * @param {Number} n
+ * @description Elle permet de changer (visualiser) d'image dans le slideshow
+ */
 const showSlide = (n) => {
   let i;
   let slides = document.getElementsByClassName("hide");
@@ -129,8 +144,7 @@ const showSlide = (n) => {
   dots[slideIndex - 1].className += " active";
 };
 
-
-// boutons avant/après
+/* boutons avant/après */
 const plusSlide = (n) => {
   showSlide((slideIndex += n));
 };
@@ -138,4 +152,3 @@ const plusSlide = (n) => {
 const currentSlide = (n) => {
   showSlide((slideIndex = n));
 };
-

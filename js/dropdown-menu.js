@@ -1,13 +1,17 @@
-/* CONSTANTS & VARIABLES */
+// RÉFÉRENCES DES ÉLÉMENTS DU DOM
 
+/* Boutons des menus */
 const startMenuBtn = document.getElementById("menu-btn");
-const addVisibleClassMenu = document.getElementById("main-menu");
-
 const startCurrencyBtn = document.getElementById("currency-btn");
-const addVisibleClassCurrency = document.getElementById("currency-menu");
-
 const startCartBtn = document.getElementById("cart-btn");
+
+/* Menus */
+const addVisibleClassMenu = document.getElementById("main-menu");
+const addVisibleClassCurrency = document.getElementById("currency-menu");
 const addVisibleClassCart = document.getElementById("cart-menu");
+
+/* Tableau d'ID's des menus */
+const menuArray = ["main-menu", "currency-menu", "cart-menu"];
 
 /* FUNCTIONS */
 
@@ -40,6 +44,16 @@ const toggleVisibleCart = () => {
     addVisibleClassCurrency.classList.remove("dropdown-visible");
   }
 };
+
+/* a verifier!!! */
+window.addEventListener("mouseup", (event) => {
+  menuArray.forEach((id) => {
+    let menu = document.getElementById(id);
+    if (event.target !== menu && event.target.parentNode !== menu) {
+      menu.classList.remove("dropdown-visible");
+    }
+  });
+});
 
 /* EVENT LISTENERS */
 
