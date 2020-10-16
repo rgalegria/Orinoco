@@ -1,391 +1,320 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta
-      name="description"
-      content="Le site web pour retrouver les meilleurs références en appareils photo vintage."
-    />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta
+            name="description"
+            content="Le site web pour retrouver les meilleurs références en appareils photo vintage."
+        />
 
-    <title>Orinoco - Appareils Photo Vintage</title>
-    <link rel="canonical" href="https://rgalegria.github.io/orinoco/" />
+        <title>Orinoco - Appareils Photo Vintage</title>
+        <link rel="canonical" href="https://rgalegria.github.io/orinoco/" />
 
-    <!-- Favicons-->
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
-    <link rel="manifest" href="site.webmanifest" />
-    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5100ff" />
-    <meta name="msapplication-TileColor" content="#5100ff" />
-    <meta name="theme-color" content="#ffffff" />
+        <!-- Favicons-->
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+        <link rel="manifest" href="site.webmanifest" />
+        <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5100ff" />
+        <meta name="msapplication-TileColor" content="#5100ff" />
+        <meta name="theme-color" content="#ffffff" />
 
-    <!-- Rich Card -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Store",
-        "name": "Orinoco Appareils Photo",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "7 Cité Paradis",
-          "addressLocality": "Paris",
-          "addressRegion": "",
-          "postalCode": "75010"
-        },
-        "image": "rgalegria.github.io/orinoco/favicon-32x32.png",
-        "email": "shop@orinoco.fr",
-        "telePhone": "+33 1 23 45 67 89",
-        "url": "rgalegria.github.io/orinoco",
-        "openingHours": "Mo,Tu,We,Th,Fr 09:00-19:00",
-        "openingHoursSpecification": [
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": [
-              "Monday",
-              "Tuesday",
-              "Wednesday",
-              "Thursday",
-              "Friday"
-            ],
-            "opens": "09:00",
-            "closes": "19:00"
-          }
-        ],
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": "48.874798",
-          "longitude": "2.350510"
-        },
-        "priceRange": "$"
-      }
-    </script>
+        <!-- Rich Card -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Store",
+                "name": "Orinoco Appareils Photo",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "7 Cité Paradis",
+                    "addressLocality": "Paris",
+                    "addressRegion": "",
+                    "postalCode": "75010"
+                },
+                "image": "rgalegria.github.io/orinoco/favicon-32x32.png",
+                "email": "shop@orinoco.fr",
+                "telePhone": "+33 1 23 45 67 89",
+                "url": "rgalegria.github.io/orinoco",
+                "openingHours": "Mo,Tu,We,Th,Fr 09:00-19:00",
+                "openingHoursSpecification": [
+                    {
+                        "@type": "OpeningHoursSpecification",
+                        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                        "opens": "09:00",
+                        "closes": "19:00"
+                    }
+                ],
+                "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": "48.874798",
+                    "longitude": "2.350510"
+                },
+                "priceRange": "$"
+            }
+        </script>
 
-    <!-- Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Oswald:300,500,700&display=swap"
-      rel="stylesheet"
-    />
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Oswald:300,500,700&display=swap" rel="stylesheet" />
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap"
-      rel="stylesheet"
-    />
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap" rel="stylesheet" />
 
-    <!-- Font-awesome -->
-    <script
-      src="https://kit.fontawesome.com/a44570b978.js"
-      crossorigin="anonymous"
-      defer
-    ></script>
+        <!-- Font-awesome -->
+        <script src="https://kit.fontawesome.com/a44570b978.js" crossorigin="anonymous" defer></script>
 
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="/css/main.min.css" />
+        <!-- Main CSS -->
+        <link rel="stylesheet" href="css/main.min.css" />
 
-    <!-- Javascript -->
-    <script src="/js/dropdown-menu.min.js" defer></script>
-    <script src="/js/cart.min.js" defer></script>
+        <!-- Javascript -->
+        <script src="js/dropdown-menu.min.js" defer></script>
+        <script src="js/cart.min.js" defer></script>
 
-    <!-- Dev. CSS -->
-    <!-- <link rel="stylesheet" href="/css/main.css" /> -->
+        <!-- Dev. CSS -->
+        <!-- <link rel="stylesheet" href="/css/main.css" /> -->
 
-    <!-- Dev. JavaScript -->
-    <!-- <script src="/js/dropdown-menu.js" defer></script> -->
-    <!-- <script src="/js/cart.js" defer></script> -->
+        <!-- Dev. JavaScript -->
+        <!-- <script src="/js/dropdown-menu.js" defer></script> -->
+        <!-- <script src="/js/cart.js" defer></script> -->
 
-    <!-- Facebook -->
-    <meta property="og:url" content="https://rgalegria.github.io/orinoco/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Orinoco" />
-    <meta
-      property="og:description"
-      content="Le site web pour retrouver les meilleurs références en appareils photo vintage."
-    />
-    <meta
-      property="og:image"
-      content="https://rgalegria.github.io/orinoco/orinoco-social-card.jpg"
-    />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+        <!-- Facebook -->
+        <meta property="og:url" content="https://rgalegria.github.io/orinoco/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Orinoco" />
+        <meta
+            property="og:description"
+            content="Le site web pour retrouver les meilleurs références en appareils photo vintage."
+        />
+        <meta property="og:image" content="https://rgalegria.github.io/orinoco/orinoco-social-card.jpg" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Orinoco" />
-    <meta
-      name="twitter:description"
-      content="Le site web pour retrouver les meilleurs références en appareils photo vintage."
-    />
-    <meta
-      name="twitter:image"
-      content="https://rgalegria.github.io/orinoco/orinoco-social-card.jpg"
-    />
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Orinoco" />
+        <meta
+            name="twitter:description"
+            content="Le site web pour retrouver les meilleurs références en appareils photo vintage."
+        />
+        <meta name="twitter:image" content="https://rgalegria.github.io/orinoco/orinoco-social-card.jpg" />
 
-    <!-- Google Analytics -->
-    <script>
-      (function (i, s, o, g, r, a, m) {
-        i["GoogleAnalyticsObject"] = r;
-        (i[r] =
-          i[r] ||
-          function () {
-            (i[r].q = i[r].q || []).push(arguments);
-          }),
-          (i[r].l = 1 * new Date());
-        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m);
-      })(
-        window,
-        document,
-        "script",
-        "https://www.google-analytics.com/analytics.js",
-        "ga"
-      );
+        <!-- Google Analytics -->
+        <script>
+            (function (i, s, o, g, r, a, m) {
+                i["GoogleAnalyticsObject"] = r;
+                (i[r] =
+                    i[r] ||
+                    function () {
+                        (i[r].q = i[r].q || []).push(arguments);
+                    }),
+                    (i[r].l = 1 * new Date());
+                (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m);
+            })(window, document, "script", "https://www.google-analytics.com/analytics.js", "ga");
 
-      ga("create", "UA-XXXXX-Y", "auto");
-      ga("send", "pageview");
-    </script>
-  </head>
+            ga("create", "UA-XXXXX-Y", "auto");
+            ga("send", "pageview");
+        </script>
+    </head>
 
-  <body>
-    <!-- Navigation -->
-    <header class="navbar">
-      <!-- Navigation logo-->
-      <div class="navbar__logo">
-        <a class="navbar__logo__link" href="/">
-          <img
-            src="img/logo-orinoco-appareils-photo-vintage.png"
-            alt="Logo de Orinoco, e-commerce d'appareils photo vintage"
-          />
-        </a>
-      </div>
+    <body>
+        <!-- Navigation -->
+        <header class="navbar">
+            <!-- Navigation logo-->
+            <div class="navbar__logo">
+                <a class="navbar__logo__link" href="/">
+                    <img
+                        src="img/logo-orinoco-appareils-photo-vintage.png"
+                        alt="Logo de Orinoco, e-commerce d'appareils photo vintage"
+                    />
+                </a>
+            </div>
 
-      <!-- Navigation Btns-->
-      <!-- Main Menu Btn -->
-      <div class="navbar__wrap">
-        <button
-          id="menu-btn"
-          aria-label="menu principal"
-          type="button"
-          class="nav-btn navbar__wrap__menu"
-        >
-          <img src="/img/orinoco-menu-icon.svg" alt="menu principal" />
-        </button>
+            <!-- Navigation Btns-->
+            <!-- Main Menu Btn -->
+            <div class="navbar__wrap">
+                <button id="menu-btn" aria-label="menu principal" type="button" class="nav-btn navbar__wrap__menu">
+                    <img src="img/orinoco-menu-icon.svg" alt="menu principal" />
+                </button>
 
-        <!-- Currencies Btn -->
-        <button
-          id="currency-btn"
-          aria-label="menu divises"
-          type="button"
-          class="nav-btn navbar__wrap__currency"
-        >
-          EUR
-        </button>
+                <!-- Currencies Btn -->
+                <button
+                    id="currency-btn"
+                    aria-label="menu divises"
+                    type="button"
+                    class="nav-btn navbar__wrap__currency"
+                >
+                    EUR
+                </button>
 
-        <!-- Cart Btn -->
-        <button
-          id="cart-btn"
-          aria-label="panier"
-          type="button"
-          class="nav-btn navbar__wrap__cart"
-        >
-          <div id="cart-pilot" class="nav-btn navbar__wrap__cart__pilot"></div>
-          <i class="fas fa-shopping-basket navbar__icons"></i>
-        </button>
-      </div>
+                <!-- Cart Btn -->
+                <button id="cart-btn" aria-label="panier" type="button" class="nav-btn navbar__wrap__cart">
+                    <div id="cart-pilot" class="nav-btn navbar__wrap__cart__pilot"></div>
+                    <i class="fas fa-shopping-basket navbar__icons"></i>
+                </button>
+            </div>
 
-      <!-- Navigation Main Menu-->
-      <nav
-        id="main-menu"
-        class="main__menu dropdown"
-        aria-label="menu principal"
-      >
-        <div>
-          <ul class="main__menu__list">
-            <li>
-              <a
-                class="main__menu__link main__menu__link--active menu-hover"
-                href="/"
-                >home</a
-              >
-            </li>
-            <li>
-              <a class="main__menu__link menu-hover" href="/product-list/"
-                >liste de produits</a
-              >
-            </li>
-            <li>
-              <a class="main__menu__link menu-hover" href="#"
-                >nouvelles arrivages</a
-              >
-            </li>
-            <li>
-              <a class="main__menu__link menu-hover" href="#"
-                >À propos de nous</a
-              >
-            </li>
-          </ul>
+            <!-- Navigation Main Menu-->
+            <nav id="main-menu" class="main__menu dropdown" aria-label="menu principal">
+                <div>
+                    <ul class="main__menu__list">
+                        <li>
+                            <a class="main__menu__link main__menu__link--active menu-hover" href="/">home</a>
+                        </li>
+                        <li>
+                            <a class="main__menu__link menu-hover" href="/product-list/">liste de produits</a>
+                        </li>
+                        <li>
+                            <a class="main__menu__link menu-hover" href="#">nouvelles arrivages</a>
+                        </li>
+                        <li>
+                            <a class="main__menu__link menu-hover" href="#">À propos de nous</a>
+                        </li>
+                    </ul>
 
-          <ul class="main__menu__address">
-            <li>Orinoco S.A</li>
-            <li>7 Cité Paradis</li>
-            <li>75010 Paris</li>
-            <li>
-              Téléphone :
-              <a class="menu-hover" href="tel:+33712345678"
-                >+33 7 12 34 56 78</a
-              >
-            </li>
-            <li>
-              E-mal :
-              <a class="menu-hover" href="mailto:shop@orinoco.fr"
-                >shop@orinoco.fr</a
-              >
-            </li>
-          </ul>
+                    <ul class="main__menu__address">
+                        <li>Orinoco S.A</li>
+                        <li>7 Cité Paradis</li>
+                        <li>75010 Paris</li>
+                        <li>
+                            Téléphone :
+                            <a class="menu-hover" href="tel:+33712345678">+33 7 12 34 56 78</a>
+                        </li>
+                        <li>
+                            E-mal :
+                            <a class="menu-hover" href="mailto:shop@orinoco.fr">shop@orinoco.fr</a>
+                        </li>
+                    </ul>
 
-          <ul class="main__menu__networks">
-            <li class="main__menu__networks__item">
-              <a
-                class="main__menu__networks__link menu-hover"
-                href="https://www.instagram.com"
-                target="_blank"
-                ><i class="fab fa-instagram"></i
-              ></a>
-            </li>
-            <li class="main__menu__networks__item">
-              <a
-                class="main__menu__networks__link menu-hover"
-                href="https://www.facebook.com"
-                target="_blank"
-                ><i class="fab fa-facebook-square"></i
-              ></a>
-            </li>
-            <li class="main__menu__networks__item">
-              <a
-                class="main__menu__networks__link menu-hover"
-                href="https://www.twitter.com"
-                target="_blank"
-                ><i class="fab fa-twitter"></i
-              ></a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+                    <ul class="main__menu__networks">
+                        <li class="main__menu__networks__item">
+                            <a
+                                class="main__menu__networks__link menu-hover"
+                                href="https://www.instagram.com"
+                                target="_blank"
+                                ><i class="fab fa-instagram"></i
+                            ></a>
+                        </li>
+                        <li class="main__menu__networks__item">
+                            <a
+                                class="main__menu__networks__link menu-hover"
+                                href="https://www.facebook.com"
+                                target="_blank"
+                                ><i class="fab fa-facebook-square"></i
+                            ></a>
+                        </li>
+                        <li class="main__menu__networks__item">
+                            <a
+                                class="main__menu__networks__link menu-hover"
+                                href="https://www.twitter.com"
+                                target="_blank"
+                                ><i class="fab fa-twitter"></i
+                            ></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
 
-      <!-- Navigation Curency-->
-      <nav
-        id="currency-menu"
-        class="currency__menu dropdown"
-        aria-label="menu divises"
-      >
-        <p class="currency__menu__title">selectionez votre devise :</p>
-        <div>
-          <ul class="currency__menu__list">
-            <li>
-              <a
-                class="currency__menu__link main__menu__link--active menu-hover"
-                href="#"
-                >EURO</a
-              >
-            </li>
-            <li>
-              <a class="currency__menu__link menu-hover" href="#">GBP</a>
-            </li>
-            <li>
-              <a class="currency__menu__link menu-hover" href="#">USD</a>
-            </li>
-            <li>
-              <a class="currency__menu__link menu-hover" href="#">DKK</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+            <!-- Navigation Curency-->
+            <nav id="currency-menu" class="currency__menu dropdown" aria-label="menu divises">
+                <p class="currency__menu__title">selectionez votre devise :</p>
+                <div>
+                    <ul class="currency__menu__list">
+                        <li>
+                            <a class="currency__menu__link main__menu__link--active menu-hover" href="#">EURO</a>
+                        </li>
+                        <li>
+                            <a class="currency__menu__link menu-hover" href="#">GBP</a>
+                        </li>
+                        <li>
+                            <a class="currency__menu__link menu-hover" href="#">USD</a>
+                        </li>
+                        <li>
+                            <a class="currency__menu__link menu-hover" href="#">DKK</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
 
-      <!-- Navigation Cart-->
-      <nav id="cart-menu" class="cart__menu dropdown" aria-label="panier">
-        <header class="cart__menu__header">
-          <h1 class="cart__menu__title">mon panier</h1>
-          <p id="articles-msg" class="cart__menu__info">
-            Les articles seront réservés 30 minutes
-          </p>
+            <!-- Navigation Cart-->
+            <nav id="cart-menu" class="cart__menu dropdown" aria-label="panier">
+                <header class="cart__menu__header">
+                    <h1 class="cart__menu__title">mon panier</h1>
+                    <p id="articles-msg" class="cart__menu__info">Les articles seront réservés 30 minutes</p>
+                </header>
+
+                <!--Cart product-->
+                <section id="empty-cart" class="cart__menu__empty">
+                    <div class="cart__menu__empty__img">
+                        <img
+                            src="img/cactus.svg"
+                            alt="image d'un cactus indiquand la manque de produits dans le panier d'orinoco"
+                        />
+                    </div>
+                    <h4>votre panier est vide</h4>
+                </section>
+                <section id="cart-container" class="cart__menu__product"></section>
+
+                <!--Cart CTA-->
+                <div id="cta-block">
+                    <h3 class="cart__menu__product__total">
+                        Total Panier<span id="subtotal-price" class="cart__menu__product__total__price"></span>
+                    </h3>
+                    <div class="cta-btn cart__menu__product__btn">
+                        <a class="cta-btn__link" href="/cart/">Aller au panier</a>
+                    </div>
+                </div>
+            </nav>
         </header>
 
-        <!--Cart product-->
-        <section id="empty-cart" class="cart__menu__empty">
-          <div class="cart__menu__empty__img">
-            <img
-              src="/img/cactus.svg"
-              alt="image d'un cactus indiquand la manque de produits dans le panier d'orinoco"
-            />
-          </div>
-          <h4>votre panier est vide</h4>
-        </section>
-        <section id="cart-container" class="cart__menu__product"></section>
+        <!-- Main -->
+        <main class="banner"></main>
+        <article class="banner__wrapper">
+            <section class="banner__foreground">
+                <h1 class="banner__title">Mieux l’originale qu’un filtre digital</h1>
+            </section>
+            <div class="banner__btn cta-btn">
+                <a class="cta-btn__link" href="/product-list/">voir les produits</a>
+            </div>
+        </article>
 
-        <!--Cart CTA-->
-        <div id="cta-block">
-          <h3 class="cart__menu__product__total">
-            Total Panier<span
-              id="subtotal-price"
-              class="cart__menu__product__total__price"
-            ></span>
-          </h3>
-          <div class="cta-btn cart__menu__product__btn">
-            <a class="cta-btn__link" href="/cart/">Aller au panier</a>
-          </div>
-        </div>
-      </nav>
-    </header>
-
-    <!-- Main -->
-    <main class="banner"></main>
-    <article class="banner__wrapper">
-      <section class="banner__foreground">
-        <h1 class="banner__title">
-          Mieux l’originale qu’un filtre digital
-        </h1>
-      </section>
-      <div class="banner__btn cta-btn">
-        <a class="cta-btn__link" href="/product-list/">voir les produits</a>
-      </div>
-    </article>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <ul class="footer__links">
-        <li class="footer__links__item">
-          <a href="#">Méntions Légales</a>
-        </li>
-        <li class="footer__links__item">
-          <a href="#">Livraison et retours</a>
-        </li>
-        <li class="footer__links__item">
-          <a href="#">Aide et information</a>
-        </li>
-      </ul>
-      <div class="footer__wrap">
-        <p class="footer__text">Moyens de paiement acceptés</p>
-        <ul class="footer__icons">
-          <li class="footer__icons__item">
-            <i class="fab fa-cc-apple-pay"></i>
-          </li>
-          <li class="footer__icons__item">
-            <i class="fab fa-cc-visa"></i>
-          </li>
-          <li class="footer__icons__item">
-            <i class="fab fa-cc-mastercard"></i>
-          </li>
-          <li class="footer__icons__item">
-            <i class="fab fa-cc-amex"></i>
-          </li>
-          <li class="footer__icons__item">
-            <i class="fab fa-cc-paypal"></i>
-          </li>
-        </ul>
-      </div>
-    </footer>
-  </body>
+        <!-- Footer -->
+        <footer class="footer">
+            <ul class="footer__links">
+                <li class="footer__links__item">
+                    <a href="#">Méntions Légales</a>
+                </li>
+                <li class="footer__links__item">
+                    <a href="#">Livraison et retours</a>
+                </li>
+                <li class="footer__links__item">
+                    <a href="#">Aide et information</a>
+                </li>
+            </ul>
+            <div class="footer__wrap">
+                <p class="footer__text">Moyens de paiement acceptés</p>
+                <ul class="footer__icons">
+                    <li class="footer__icons__item">
+                        <i class="fab fa-cc-apple-pay"></i>
+                    </li>
+                    <li class="footer__icons__item">
+                        <i class="fab fa-cc-visa"></i>
+                    </li>
+                    <li class="footer__icons__item">
+                        <i class="fab fa-cc-mastercard"></i>
+                    </li>
+                    <li class="footer__icons__item">
+                        <i class="fab fa-cc-amex"></i>
+                    </li>
+                    <li class="footer__icons__item">
+                        <i class="fab fa-cc-paypal"></i>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </body>
 </html>
